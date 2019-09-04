@@ -33,4 +33,4 @@ jobs:
     #     pip install pytest
     #     pytest
     - name: Test run
-      run: ./tools/pttestscript
+      run: ./tools/scripts/pttestscript
