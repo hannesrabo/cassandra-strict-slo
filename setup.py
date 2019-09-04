@@ -4,9 +4,9 @@ from setuptools import setup
 setup(
     name='cassandra-slo',
     version='1.0',
-    description='A useful module',
-    author='Man Foo',
-    author_email='foomail@foo.com',
-    packages=['foo'],
+    description='Module for testing cassandra SLO',
+    author='',
+    author_email='',
+    packages=['cassandra-slo'],
     scripts=['tools/bin/pttestscript']
 )
