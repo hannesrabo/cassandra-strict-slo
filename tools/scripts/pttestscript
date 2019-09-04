@@ -4,3 +4,6 @@ print("hello")
 
 if __name__ == '__main__':
     print("This is the test file")
+
+    def f(fdf):
+        print("df")
