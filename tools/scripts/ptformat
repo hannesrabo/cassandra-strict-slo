@@ -35,7 +35,7 @@ def autopep8(filepath):
         args.extend(('--ignore', ','.join(ignore_codes)))
     args.extend(overrides)
     args.append(filepath)
-    # output = system(*args)
+    output = system(*args)
 
 
 def main():
@@ -54,6 +54,7 @@ def main():
     files = modified.findall(files)
 
     for name in files:
+        print("Running pep8 on: " + name)
         filepath = os.path.join(basedir, name)
         autopep8(filepath)
         system("git", "add", filepath)
