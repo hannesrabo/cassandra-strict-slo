@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # Installing python
-sudo apt install python3
-sudo apt install python3-pip
-sudo apt install python3-venv 
+sudo apt install python3 python3-pip python3-venv
 
 # Creating a virtual environment.
 mkdir .env
