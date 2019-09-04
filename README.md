@@ -26,3 +26,15 @@ To deactivate the environment run:
 ```sh
 > deactivate
 ```
+
+# Running in vs code
+If you are running in vs code you may add these lines to `.vscode/settings.json`
+
+```json
+{
+    "python.pythonPath": "env-slo/bin/python",
+    "python.linting.pep8Enabled": true,
+    "python.linting.pylintEnabled": true,
+    "editor.formatOnSave": true
+}
+```
