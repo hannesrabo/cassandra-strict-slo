@@ -47,14 +47,17 @@ def main():
         exit(1)
 
     # pylint: disable=anomalous-backslash-in-string
-    modified = re.compile('^[AM]+\s+(?P<name>.*\.py)', re.MULTILINE)
+    modified = re.compile('^[AM]+\s+((?P<name>.*\.py)|(?P<name2>.+pt[^/]+))\n', re.MULTILINE)
     basedir = system('git', 'rev-parse',
                      '--show-toplevel').decode("utf-8").strip()
     files = system('git', 'status', '--porcelain').decode("utf-8")
+    print(files)
     files = modified.findall(files)
 
-    for name in files:
-        print("Running pep8 on: " + name)
+    # The returned tuples represent all matched groups in regexp
+    for name_tuple in files:
+        name = name_tuple[0]
+        print("Running pep8 on: " + repr(name))
         filepath = os.path.join(basedir, name)
         autopep8(filepath)
         system("git", "add", filepath)
