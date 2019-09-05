@@ -51,7 +51,6 @@ def main():
     basedir = system('git', 'rev-parse',
                      '--show-toplevel').decode("utf-8").strip()
     files = system('git', 'status', '--porcelain').decode("utf-8")
-    print(files)
     files = modified.findall(files)
 
     # The returned tuples represent all matched groups in regexp
