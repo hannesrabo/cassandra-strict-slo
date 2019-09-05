@@ -1,4 +1,4 @@
-## Docker
+# Docker
 
 - Building the image: `docker build -t doodle-summer:v1 . `
 - Running image: `docker run --rm doodle-summer:v1` vs `docker run doodle-summer:v1`
