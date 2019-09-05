@@ -43,7 +43,8 @@ def main():
         import autopep8 as ap8
     except ImportError:
         print("'autopep8' is required. "
-              "Please install with `pip install autopep8`.", file=sys.stderr)
+              "Please install with `pip install autopep8` or make sure you"
+              " are in the correct environment.", file=sys.stderr)
         exit(1)
 
     # pylint: disable=anomalous-backslash-in-string
