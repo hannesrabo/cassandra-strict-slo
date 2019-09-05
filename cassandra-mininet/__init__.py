@@ -5,3 +5,4 @@ def test_func(parameter_list):
     print("hej hej")
     print("Hej")
     print("Last cachange")
+    print("This is test")
