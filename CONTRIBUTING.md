@@ -20,6 +20,7 @@ This describes the workflow when working with git and the repo.
   - `git rebase upstream/master`
   - `git push (git push --set-upstream origin my-feature-branch)`
 - Create PR
+  - If there is an issue related to the PR, write: `fixes <copied link to issue>` in the description of the PR. This will make sure the issue is closed when the PR is merged. It does work to refer to PRs in comments but this does not close them.
 - Review PR yourself
 - Add comments to things that might be non-obvious
 - Add fixes you discovered during self-review
