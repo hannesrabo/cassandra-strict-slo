@@ -21,6 +21,7 @@ This describes the workflow when working with git and the repo.
   - `git push (git push --set-upstream origin my-feature-branch)`
 - Create PR
   - If there is an issue related to the PR, write: `fixes <copied link to issue>` in the description of the PR. This will make sure the issue is closed when the PR is merged. It does work to refer to PRs in comments but this does not close them.
+  - Name the PR in a way that makes sense. Start with the general area and then a sentence that describes what it adds: `docs: Adds new documentation installing python`. The name of the PR will propagate to the commit message when it is merged.
 - Review PR yourself
 - Add comments to things that might be non-obvious
 - Add fixes you discovered during self-review
@@ -32,6 +33,7 @@ This describes the workflow when working with git and the repo.
 
 - Try to keep every PR strictly related to a single problem.
 - Try to keep PRs under 500 lines.
+- Naming scheme is `area of affect` : `Active form sentence of what is added`. Example: `build: Adds new build script for mac os.`.
 
 ## Review guidelines
 
