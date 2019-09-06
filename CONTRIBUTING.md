@@ -26,6 +26,7 @@ This describes the workflow when working with git and the repo.
 - Add fixes you discovered during self-review
 - Share the PR with the rest of the group.
 - After the PR is approved, use "squash and merge" this hides internal small commits and merges in the master branch.
+- Delete the branch on github, then delete the branch locally: `git branch -d my-feature-branch`
 
 ## General guidelines for PRs
 
