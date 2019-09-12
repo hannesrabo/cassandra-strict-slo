@@ -73,7 +73,7 @@ class MyTopo( Topo ):
 #         host.cmd('python application/web/http_server.py ' + name + ' &')
 
     def enableCLI(self):
-        CLI(net)
+        CLI(self.net)
 
 if __name__ == "__main__":
     #Create UC Topology instance
