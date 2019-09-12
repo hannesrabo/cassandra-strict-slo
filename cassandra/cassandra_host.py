@@ -30,7 +30,7 @@ class CassandraHost():
         # Represents which core in the system it should run on
         self.core = core
 
-        # The IP of the seed node in the cluster
+        # The IP of the seed nodes in the cluster
         self.seed_nodes = seed_nodes
 
     def get_host(self):
