@@ -3,13 +3,6 @@ import mock
 import unittest
 from cassandra.cassandra_host import CassandraHost
 
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
-
-docker_cmd_stop = "docker stop {name}"
-docker_cmd_remove = "docker rm {name}"
-docker_cmd_run = "docker run --name {name} {flags} -d cassandra"
-
 
 class TestCassandraHost(unittest.TestCase):
     """Test cassandra instance in the network."""
