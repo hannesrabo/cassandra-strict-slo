@@ -9,7 +9,7 @@ docker_cmd_run = "docker run --name {name} {flags} -d cassandra"
 
 
 class CassandraHost():
-    """Represents a cassandra instance in the network."""
+    """Represents a Cassandra instance in the network."""
 
     def __init__(self,
                  topology,
@@ -18,8 +18,8 @@ class CassandraHost():
                  data_center="datacenter1",
                  max_heap="1024M",
                  core=None,
-                 seed_node=None):
-        """Container class for a cassandra host."""
+                 seed_nodes=None):
+        """Container class for a Cassandra host."""
         self.topology = topology
         self.name = name
 
@@ -31,7 +31,7 @@ class CassandraHost():
         self.core = core
 
         # The IP of the seed node in the cluster
-        self.seed_node = seed_node
+        self.seed_nodes = seed_nodes
 
     def get_host(self):
         """Return the host from the mininet topology"""
@@ -57,9 +57,9 @@ class CassandraHost():
                 "--cpuset-cpus=\"%s\"" % self.core,
             )
 
-        if self.seed_node:
+        if self.seed_nodes:
             flags.append(
-                "-e CASSANDRA_SEEDS=%s" % self.seed_node,
+                "-e CASSANDRA_SEEDS=%s" % self.seed_nodes,
             )
 
         flags_str = " ".join(flags)

@@ -16,7 +16,7 @@ class TestCassandraHost(unittest.TestCase):
                           data_center="datacenter1",
                           max_heap="1024M",
                           core="0",
-                          seed_node="111.111.111.111")
+                          seed_nodes="111.111.111.111")
 
     def test_get_docker_name(self):
         self.assertEqual("cassandra-host-h1",
