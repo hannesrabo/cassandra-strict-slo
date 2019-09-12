@@ -12,7 +12,7 @@ class CassandraHost():
     """Represents a Cassandra instance in the network."""
 
     def __init__(self,
-                 topology,
+                 host,
                  name,
                  cluster_name="mininet-cassandra-cluster",
                  data_center="datacenter1",
@@ -20,7 +20,7 @@ class CassandraHost():
                  core=None,
                  seed_nodes=None):
         """Container class for a Cassandra host."""
-        self.topology = topology
+        self.host = host
         self.name = name
 
         self.cluster_name = cluster_name
@@ -32,10 +32,6 @@ class CassandraHost():
 
         # The IP of the seed nodes in the cluster
         self.seed_nodes = seed_nodes
-
-    def get_host(self):
-        """Return the host from the mininet topology"""
-        return self.topology.getHost(self.name)
 
     def get_docker_name(self):
         """Get the name of the docker container that is running in this host"""
@@ -65,13 +61,11 @@ class CassandraHost():
         flags_str = " ".join(flags)
 
         # Make sure we don't have any old processes running in this name.
-        host = self.get_host()
-
-        host.cmd(docker_cmd_stop.format(name=self.get_docker_name()))
-        host.cmd(docker_cmd_remove.format(name=self.get_docker_name()))
+        self.host.cmd(docker_cmd_stop.format(name=self.get_docker_name()))
+        self.host.cmd(docker_cmd_remove.format(name=self.get_docker_name()))
 
         # Start the new docker container.
-        host.cmd(docker_cmd_run.format(
+        self.host.cmd(docker_cmd_run.format(
             name=self.get_docker_name(),
             flags=flags_str
         ))
