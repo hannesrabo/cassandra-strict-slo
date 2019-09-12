@@ -45,17 +45,17 @@ class MyTopo( Topo ):
         # Add hosts
         host1 = self.addHost( 'h1', ip="100.0.0.11/24")
         host2 = self.addHost( 'h2', ip="100.0.0.12/24")
-	host3 = self.addHost( 'h3', ip="100.0.0.13/24")
+	    host3 = self.addHost( 'h3', ip="100.0.0.13/24")
         host4 = self.addHost( 'h4', ip="100.0.0.14/24")
-	host5 = self.addHost( 'h5', ip="100.0.0.15/24")
-	host6 = self.addHost( 'h6', ip="100.0.0.16/24")
-	host7 = self.addHost( 'h7', ip="100.0.0.17/24")
-	host8 = self.addHost( 'h8', ip="100.0.0.18/24")
+	    host5 = self.addHost( 'h5', ip="100.0.0.15/24")
+	    host6 = self.addHost( 'h6', ip="100.0.0.16/24")
+	    host7 = self.addHost( 'h7', ip="100.0.0.17/24")
+	    host8 = self.addHost( 'h8', ip="100.0.0.18/24")
 
 	# Links 
         self.addLink( host1, sw1 )
         self.addLink( host2, sw1 )
-	self.addLink( host3, sw1 )
+	    self.addLink( host3, sw1 )
         self.addLink( host4, sw1 )
         self.addLink( host5, sw1 )
         self.addLink( host6, sw1 )
