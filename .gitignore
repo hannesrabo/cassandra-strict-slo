@@ -1,2 +1,4 @@
 env-slo
 .vscode
+__pycache__
+.pytest_cache
