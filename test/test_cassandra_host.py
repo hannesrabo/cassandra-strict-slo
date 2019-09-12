@@ -8,9 +8,9 @@ class TestCassandraHost(unittest.TestCase):
     """Test cassandra instance in the network."""
 
     def setUp(self):
-        self.topology = mock.MagicMock()
+        self.host = mock.MagicMock()
         self.cassandra_host = \
-            CassandraHost(self.topology,
+            CassandraHost(self.host,
                           "h1",
                           cluster_name="mininet-cassandra-cluster",
                           data_center="datacenter1",
@@ -23,14 +23,11 @@ class TestCassandraHost(unittest.TestCase):
                          self.cassandra_host.get_docker_name())
 
     def test_start_cassandra_host(self):
-        host = mock.MagicMock()
-        host.cmd = mock.MagicMock()
-        self.cassandra_host.get_host = mock.MagicMock()
-        self.cassandra_host.get_host.return_value = host
+        self.host.cmd = mock.MagicMock()
 
         self.cassandra_host.start_cassandra_host()
 
-        host.cmd.assert_called_with(
+        self.host.cmd.assert_called_with(
             "docker run --name cassandra-host-h1 -p 9042:9042 "
             "-e CASSANDRA_CLUSTER_NAME=mininet-cassandra-cluster "
             "-e CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch "
