@@ -34,6 +34,10 @@ class MyTopo(Topo):
         # Give some time for network to set up
         sleep(1)
 
+        cassandra1_name = 'h1'
+        self.cassandra1 = CassandraHost(
+            self.getHost(cassandra1_name), cassandra1_name
+        )
         self.cassandra1.start_cassandra_host()
 
         # Make sure that everything is set up
@@ -65,8 +69,6 @@ class MyTopo(Topo):
         self.addLink(host6, sw1)
         self.addLink(host7, sw1)
         self.addLink(host8, sw1)
-
-        self.cassandra1 = CassandraHost(self.getHost(host1), host1)
 
     def getNet(self):
         return self.net
