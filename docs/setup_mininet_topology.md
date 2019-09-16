@@ -1,8 +1,8 @@
-# Steps to set up the Mininet topology
+# Running the Mininet topology
 ## Prerequisites
 Mininet is already installed.
 
-## Steps
+## Steps to Setup
 ### Step 1 - Add the topology file
 File name: topology_slo.py
 
