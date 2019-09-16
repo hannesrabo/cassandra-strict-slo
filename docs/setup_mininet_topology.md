@@ -38,7 +38,7 @@ Even though the switch used is a simple L2 switch and no L3 routing (e.g. IP) is
 > it is  a  simple  OpenFlow controller that manages any number of switches over the OpenFlow protocol, causing them to function as  L2 MAC-learning switches or hubs.
 
 
-# Things to consider when running Mininet
+## Things to consider when running Mininet
 
 ### Close Mininet in the shell interface
 ` exit`
