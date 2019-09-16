@@ -1,8 +1,8 @@
-# Steps to set up the Mininet topology
+# Running the Mininet topology
 ## Prerequisites
 Mininet is already installed.
 
-## Steps
+## Steps to Setup
 ### Step 1 - Add the topology file
 File name: topology_slo.py
 
@@ -36,3 +36,12 @@ In the Mininet shell, run:
 Even though the switch used is a simple L2 switch and no L3 routing (e.g. IP) is required, Mininet still requires a controller. According to the [documentation](http://www.openvswitch.org//support/dist-docs/ovs-testcontroller.8.html "document") of the ovs-testcontroller:
 
 > it is  a  simple  OpenFlow controller that manages any number of switches over the OpenFlow protocol, causing them to function as  L2 MAC-learning switches or hubs.
+
+
+## Things to consider when running Mininet
+
+### Close Mininet in the shell interface
+` exit`
+
+### IMPORTANT: Always run clean as well after closing Mininet
+`mn -c`
