@@ -1,7 +1,7 @@
 import logging
 import mock
 import unittest
-from cassandra.cassandra_host import CassandraHost
+from cassandra_slo.cassandra.cassandra_host import CassandraHost
 
 
 class TestCassandraHost(unittest.TestCase):
