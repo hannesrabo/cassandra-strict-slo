@@ -48,7 +48,8 @@ def main():
         exit(1)
 
     # pylint: disable=anomalous-backslash-in-string
-    modified = re.compile('^[AM]+\s+((?P<name>.*\.py)|(?P<name2>.+pt[^/]+))\n', re.MULTILINE)
+    modified = re.compile(
+        '^[AM]+\s+((?P<name>.*\.py)|(?P<name2>.+pt[^/]+))\n', re.MULTILINE)
     basedir = system('git', 'rev-parse',
                      '--show-toplevel').decode("utf-8").strip()
     files = system('git', 'status', '--porcelain').decode("utf-8")
