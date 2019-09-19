@@ -18,7 +18,8 @@ class CassandraHost():
                  data_center="datacenter1",
                  max_heap="1024M",
                  core=None,
-                 seed_nodes=None):
+                 seed_nodes=None,
+                 network_mode="host"):
         """Container class for a Cassandra host."""
         self.host = host
         self.name = name
@@ -33,6 +34,8 @@ class CassandraHost():
         # The IP of the seed nodes in the cluster
         self.seed_nodes = seed_nodes
 
+        self.network_mode = network_mode
+
     def get_docker_name(self):
         """Get the name of the docker container that is running in this host"""
         return "cassandra-host-%s" % self.name
@@ -40,14 +43,17 @@ class CassandraHost():
     def start_cassandra_host(self):
         """Starts a cassandra instance on this host."""
         flags = [
-            "--network=host",
-            "-p 9042:9042",
             "-e CASSANDRA_CLUSTER_NAME=%s" % self.cluster_name,
             "-e CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch",
             "-e CASSANDRA_DC=%s" % self.data_center,
             "-e HEAP_NEWSIZE=1M",
             "-e MAX_HEAP_SIZE=%s" % self.max_heap,
         ]
+
+        if self.network_mode:
+            flags.append("--network=host")
+        else:
+            flags.append("-p 9042:9042")
 
         if self.core:
             flags.append(

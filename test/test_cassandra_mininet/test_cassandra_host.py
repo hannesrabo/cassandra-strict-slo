@@ -29,11 +29,11 @@ class TestCassandraHost(unittest.TestCase):
 
         self.host.cmd.assert_called_with(
             "docker run --name cassandra-host-h1 "
-            "--network=host -p 9042:9042 "
             "-e CASSANDRA_CLUSTER_NAME=mininet-cassandra-cluster "
             "-e CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch "
             "-e CASSANDRA_DC=datacenter1 -e HEAP_NEWSIZE=1M "
             "-e MAX_HEAP_SIZE=1024M "
+            "--network=host "
             "--cpuset-cpus=\"0\" "
             "-e CASSANDRA_SEEDS=\"111.111.111.111, 222.222.222.222\" "
             "-d cassandra"
