@@ -82,7 +82,7 @@ class CassandraHost():
         result = self.host.cmd(cmd_string)
 
         print(
-            "CMD executed by node: {name}\nResult: {cmd}"
+            "CMD executed by node: {name}\nResult: {result}"
             .format(
                 name=self.get_docker_name(),
                 result=result,
