@@ -69,12 +69,13 @@ class MyTopo(Topo):
             seed_nodes="%s,%s" % (cassandra_ip_1, cassandra_ip_2),
         )
 
-        # Starting instances
+        # Starting seeds nodes.
         self.cassandra1.start_cassandra_host()
         self.cassandra2.start_cassandra_host()
 
         sleep(5)
 
+        # Starting the rest of the nodes.
         self.cassandra3.start_cassandra_host()
         self.cassandra4.start_cassandra_host()
 
