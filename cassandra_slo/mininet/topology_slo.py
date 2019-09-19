@@ -55,19 +55,19 @@ class MyTopo(Topo):
         )
         self.cassandra2 = CassandraHost(
             host=self.getHost(cassandra_node_2),
-            name=cassandra_node_1,
+            name=cassandra_node_2,
             core=1,
             seed_nodes="%s,%s" % (cassandra_ip_1, cassandra_ip_2),
         )
         self.cassandra3 = CassandraHost(
             host=self.getHost(cassandra_node_3),
-            name=cassandra_node_1,
+            name=cassandra_node_3,
             core=2,
             seed_nodes="%s,%s" % (cassandra_ip_1, cassandra_ip_2),
         )
         self.cassandra4 = CassandraHost(
             host=self.getHost(cassandra_node_4),
-            name=cassandra_node_1,
+            name=cassandra_node_4,
             core=3,
             seed_nodes="%s,%s" % (cassandra_ip_1, cassandra_ip_2),
         )
