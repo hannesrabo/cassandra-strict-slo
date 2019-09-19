@@ -1,5 +1,9 @@
 # Setup screen forwarding for GUI programs running on the server
 
+  - [Configure SSH for -X forwarding](#configure-ssh-for--x-forwarding)
+  - [Run Wireshark](#run-wireshark)
+  - [Run Xterm](#run-xterm)
+
 ## Configure SSH for -X forwarding
 
 ### On the server
