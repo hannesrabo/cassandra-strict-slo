@@ -5,7 +5,7 @@ logger = logging.getLogger(__name__)
 
 docker_cmd_stop = "docker stop {name}"
 docker_cmd_remove = "docker rm {name}"
-docker_cmd_run = "docker run --name {name} {flags} -d cassandra"
+docker_cmd_run = "docker run --name {name} {flags} -d vinayaktj/cassandra_slo:cassandra_ycsb"
 
 
 class CassandraHost():
