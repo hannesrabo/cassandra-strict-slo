@@ -2,6 +2,12 @@
 
 In this project we create a virtual network of cassandra instances to benchmark them. The goals is to perform smart request duplications to increase chanses of meeting strict latency guarantees.
 
+Starting the topology can be done by running the followin command in the root folder of the repo:
+
+```sh
+> sudo ./pttopology
+```
+
 # Developing
 > This has only been tested in ubuntu
 
