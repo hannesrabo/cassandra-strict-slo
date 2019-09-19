@@ -6,6 +6,8 @@ from mininet.cli import CLI
 from mininet.node import Switch
 from mininet.net import Mininet
 from mininet.topo import Topo
+from mininet.link import TCLink
+
 from cassandra_slo.cassandra.cassandra_host import CassandraHost
 
 cassandra_node_1 = 'h1'
@@ -34,7 +36,8 @@ class MyTopo(Topo):
             autoSetMacs=True,
             autoStaticArp=True,
             build=True,
-            cleanup=True
+            cleanup=True,
+            link=TCLink,
         )
 
         # Start the network
