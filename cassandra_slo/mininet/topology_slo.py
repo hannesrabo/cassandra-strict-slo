@@ -15,10 +15,10 @@ cassandra_node_2 = 'h2'
 cassandra_node_3 = 'h3'
 cassandra_node_4 = 'h4'
 
-cassandra_ip_1 = '100.0.0.11/24'
-cassandra_ip_2 = '100.0.0.12/24'
-cassandra_ip_3 = '100.0.0.13/24'
-cassandra_ip_4 = '100.0.0.14/24'
+cassandra_ip_1 = '100.0.0.11'
+cassandra_ip_2 = '100.0.0.12'
+cassandra_ip_3 = '100.0.0.13'
+cassandra_ip_4 = '100.0.0.14'
 
 
 class MyTopo(Topo):
