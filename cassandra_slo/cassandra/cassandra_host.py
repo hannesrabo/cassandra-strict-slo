@@ -51,7 +51,7 @@ class CassandraHost():
         ]
 
         if self.network_mode:
-            flags.append("--network=host")
+            flags.append("--network=%s" % self.network_mode)
         else:
             flags.append("-p 9042:9042")
 
