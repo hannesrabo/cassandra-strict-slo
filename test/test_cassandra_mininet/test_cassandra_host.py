@@ -36,5 +36,5 @@ class TestCassandraHost(unittest.TestCase):
             "-e MAX_HEAP_SIZE=1024M "
             "--cpuset-cpus=\"0\" "
             "-e CASSANDRA_SEEDS=\"111.111.111.111, 222.222.222.222\" "
-            "-d cassandra"
+            "-d vinayaktj/cassandra_slo:cassandra_ycsb"
         )
