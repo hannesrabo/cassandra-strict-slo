@@ -8,6 +8,16 @@ from mininet.net import Mininet
 from mininet.topo import Topo
 from cassandra_slo.cassandra.cassandra_host import CassandraHost
 
+cassandra_node_1 = 'h1'
+cassandra_node_2 = 'h2'
+cassandra_node_3 = 'h3'
+cassandra_node_4 = 'h4'
+
+cassandra_ip_1 = '100.0.0.11/24'
+cassandra_ip_2 = '100.0.0.12/24'
+cassandra_ip_3 = '100.0.0.13/24'
+cassandra_ip_4 = '100.0.0.14/24'
+
 
 class MyTopo(Topo):
     "Simple topology example."
@@ -34,11 +44,39 @@ class MyTopo(Topo):
         # Give some time for network to set up
         sleep(1)
 
-        cassandra1_name = 'h1'
         self.cassandra1 = CassandraHost(
-            self.getHost(cassandra1_name), cassandra1_name
+            host=self.getHost(cassandra_node_1),
+            name=cassandra_node_1,
+            core=0,
+            seed_nodes="%,%" % cassandra_ip_1, cassandra_ip_2,
         )
+        self.cassandra2 = CassandraHost(
+            host=self.getHost(cassandra_node_2),
+            name=cassandra_node_1,
+            core=1,
+            seed_nodes="%,%" % cassandra_ip_1, cassandra_ip_2,
+        )
+        self.cassandra3 = CassandraHost(
+            host=self.getHost(cassandra_node_3),
+            name=cassandra_node_1,
+            core=2,
+            seed_nodes="%,%" % cassandra_ip_1, cassandra_ip_2,
+        )
+        self.cassandra4 = CassandraHost(
+            host=self.getHost(cassandra_node_4),
+            name=cassandra_node_1,
+            core=3,
+            seed_nodes="%,%" % cassandra_ip_1, cassandra_ip_2,
+        )
+
+        # Starting instances
         self.cassandra1.start_cassandra_host()
+        self.cassandra2.start_cassandra_host()
+
+        sleep(5)
+
+        self.cassandra3.start_cassandra_host()
+        self.cassandra4.start_cassandra_host()
 
         # Make sure that everything is set up
         sleep(1)

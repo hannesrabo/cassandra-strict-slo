@@ -40,6 +40,7 @@ class CassandraHost():
     def start_cassandra_host(self):
         """Starts a cassandra instance on this host."""
         flags = [
+            "--network=host",
             "-p 9042:9042",
             "-e CASSANDRA_CLUSTER_NAME=%s" % self.cluster_name,
             "-e CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch",
@@ -55,7 +56,7 @@ class CassandraHost():
 
         if self.seed_nodes:
             flags.append(
-                "-e CASSANDRA_SEEDS=%s" % self.seed_nodes,
+                "-e CASSANDRA_SEEDS=\"%s\"" % self.seed_nodes,
             )
 
         flags_str = " ".join(flags)
@@ -64,8 +65,26 @@ class CassandraHost():
         self.host.cmd(docker_cmd_stop.format(name=self.get_docker_name()))
         self.host.cmd(docker_cmd_remove.format(name=self.get_docker_name()))
 
-        # Start the new docker container.
-        self.host.cmd(docker_cmd_run.format(
+        cmd_string = docker_cmd_run.format(
             name=self.get_docker_name(),
             flags=flags_str
-        ))
+        )
+
+        print(
+            "Starting node: {name}\nCMD: {cmd}"
+            .format(
+                name=self.get_docker_name(),
+                cmd=cmd_string,
+            )
+        )
+
+        # Start the new docker container.
+        result = self.host.cmd(cmd_string)
+
+        print(
+            "CMD executed by node: {name}\nResult: {cmd}"
+            .format(
+                name=self.get_docker_name(),
+                result=result,
+            )
+        )
