@@ -103,14 +103,14 @@ class MyTopo(Topo):
         host8 = self.addHost('h8', ip="100.0.0.18/24")
 
         # Links
-        self.addLink(host1, sw1, delay="1ms")
-        self.addLink(host2, sw1, delay="1ms")
-        self.addLink(host3, sw1, delay="1ms")
-        self.addLink(host4, sw1, delay="1ms")
-        self.addLink(host5, sw1, delay="1ms")
-        self.addLink(host6, sw1, delay="1ms")
-        self.addLink(host7, sw1, delay="1ms")
-        self.addLink(host8, sw1, delay="1ms")
+        self.addLink(host1, sw1, delay="0.1ms")
+        self.addLink(host2, sw1, delay="0.1ms")
+        self.addLink(host3, sw1, delay="0.1ms")
+        self.addLink(host4, sw1, delay="0.1ms")
+        self.addLink(host5, sw1, delay="0.1ms")
+        self.addLink(host6, sw1, delay="0.1ms")
+        self.addLink(host7, sw1, delay="0.1ms")
+        self.addLink(host8, sw1, delay="0.1ms")
 
     def getNet(self):
         return self.net
