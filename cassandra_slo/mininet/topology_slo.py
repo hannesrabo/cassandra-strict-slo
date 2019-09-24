@@ -8,8 +8,6 @@ from mininet.net import Mininet
 from mininet.topo import Topo
 from mininet.link import TCLink
 
-from cassandra_slo.cassandra.cassandra_host import CassandraHost
-
 cassandra_node_1 = 'h1'
 cassandra_node_2 = 'h2'
 cassandra_node_3 = 'h3'
