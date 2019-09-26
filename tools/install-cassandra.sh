@@ -5,7 +5,7 @@ REPO_PATH=$(git rev-parse --show-toplevel)
 cd "$REPO_PATH/.."
 
 # Cloning the cassandra fork
-# git clone https://github.com/hannesrabo/cassandra.git
+git clone https://github.com/hannesrabo/cassandra.git
 cd cassandra
 CLONED_PATH=$(pwd)
 
