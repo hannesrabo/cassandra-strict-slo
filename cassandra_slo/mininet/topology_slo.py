@@ -90,7 +90,7 @@ class MyTopo(Topo):
 
     def startCassandra(self, name):
         host = self.getHost(name)
-        host.cmd('./tools/start-cassandra.sh')
+        host.cmd('./tools/start-cassandra.sh &')
 
     def enableCLI(self):
         CLI(self.net)
