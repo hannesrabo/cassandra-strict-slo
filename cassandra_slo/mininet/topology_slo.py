@@ -52,34 +52,34 @@ class MyTopo(Topo):
         # Give some time for network to set up
         sleep(1)
 
-# TESTING CORE PINNING
+	# TESTING CORE PINNING
 	numOfCores = numCores()
 	print 'The number of cores is: ', numOfCores
 
-#        self.cassandra1 = CassandraHost(
-#            host=self.getHost(cassandra_node_1),
-#            name=cassandra_node_1,
-#            core=0,
-#            seed_nodes="%s,%s" % (cassandra_ip_1, cassandra_ip_2),
-#        )
-#        self.cassandra2 = CassandraHost(
-#            host=self.getHost(cassandra_node_2),
-#            name=cassandra_node_2,
-#            core=1,
-#            seed_nodes="%s,%s" % (cassandra_ip_1, cassandra_ip_2),
-#        )
-#        self.cassandra3 = CassandraHost(
-#            host=self.getHost(cassandra_node_3),
-#            name=cassandra_node_3,
-#            core=2,
-#            seed_nodes="%s,%s" % (cassandra_ip_1, cassandra_ip_2),
-#        )
-#        self.cassandra4 = CassandraHost(
-#            host=self.getHost(cassandra_node_4),
-#            name=cassandra_node_4,
-#            core=3,
-#            seed_nodes="%s,%s" % (cassandra_ip_1, cassandra_ip_2),
-#        )
+#         self.cassandra1 = CassandraHost(
+#             host=self.getHost(cassandra_node_1),
+#             name=cassandra_node_1,
+#             core=0,
+#             seed_nodes="%s,%s" % (cassandra_ip_1, cassandra_ip_2),
+#         )
+#         self.cassandra2 = CassandraHost(
+#             host=self.getHost(cassandra_node_2),
+#             name=cassandra_node_2,
+#             core=1,
+#             seed_nodes="%s,%s" % (cassandra_ip_1, cassandra_ip_2),
+#         )
+#         self.cassandra3 = CassandraHost(
+#             host=self.getHost(cassandra_node_3),
+#             name=cassandra_node_3,
+#             core=2,
+#             seed_nodes="%s,%s" % (cassandra_ip_1, cassandra_ip_2),
+#         )
+#         self.cassandra4 = CassandraHost(
+#             host=self.getHost(cassandra_node_4),
+#             name=cassandra_node_4,
+#             core=3,
+#             seed_nodes="%s,%s" % (cassandra_ip_1, cassandra_ip_2),
+#         )
 #
 #        # Starting seeds nodes.
 #        self.cassandra1.start_cassandra_host()
@@ -90,10 +90,13 @@ class MyTopo(Topo):
 #        # Starting the rest of the nodes.
 #        self.cassandra3.start_cassandra_host()
 #        self.cassandra4.start_cassandra_host()
-#
-#        # Make sure that everything is set up
-#        sleep(1)
-#
+
+	# Assign cores to the hosts
+	self.getHost('h1').config(cores=1)	
+	
+        # Make sure that everything is set up
+        sleep(1)
+
     def createTopology(self):
         # Initialize topology
         Topo.__init__(self)
@@ -103,7 +106,6 @@ class MyTopo(Topo):
 
         # Add hosts
         host1 = self.addHost('h1', ip="100.0.0.11/24")
-	host1.config(cores=1)
         host2 = self.addHost('h2', ip="100.0.0.12/24")
         host3 = self.addHost('h3', ip="100.0.0.13/24")
         host4 = self.addHost('h4', ip="100.0.0.14/24")
