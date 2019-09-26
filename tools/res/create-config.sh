@@ -5,19 +5,12 @@ CASSANDRA_DATA="/slo/cassandra"
 echo "Creating config : $CASSANDRA_CONF"
 
 _sed-in-place() {
-
 	local filename="$1"; shift
-
 	local tempFile
-
 	tempFile="$(mktemp)"
-
 	sed "$@" "$filename" > "$tempFile"
-
 	cat "$tempFile" > "$filename"
-
 	rm "$tempFile"
-
 }
 
 _sed-in-place "$CASSANDRA_DATA/cassandra.yaml" \
