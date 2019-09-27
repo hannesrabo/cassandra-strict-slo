@@ -7,11 +7,6 @@ from mininet.net import Mininet
 from mininet.topo import Topo
 from mininet.link import TCLink
 
-#For Core Pinning
-from mininet.node import Switch, CPULimitedHost
-from mininet.util import numCores
-
-
 cassandra_node_1 = 'h1'
 cassandra_node_2 = 'h2'
 cassandra_node_3 = 'h3'
@@ -41,9 +36,7 @@ class MyTopo(Topo):
             autoStaticArp=True,
             build=True,
             cleanup=True,
-            link=TCLink,
-            autoPinCpus=True,       #added parameter for core pinning
-            host=CPULimitedHost     #added parameter for core pinning
+            link=TCLink
         )
 
         # Start the network
@@ -56,22 +49,8 @@ class MyTopo(Topo):
         self.startCassandra('h1')
         self.startCassandra('h2')
 
-    # TESTING CORE PINNING (returns number of cores)
-	numOfCores = numCores()
-	print 'The number of cores is: ', numOfCores
-
-    # Assign cores to the hosts
-	self.getHost('h1').config(cores=1)	
-	self.getHost('h2').config(cores=0)	
-	self.getHost('h3').config(cores=2)	
-	self.getHost('h4').config(cores=3)	
-	self.getHost('h5').config(cores=4)	
-	self.getHost('h6').config(cores=5)	
-
         # Make sure that everything is set up
         sleep(1)
-
-    
 
     def createTopology(self):
         # Initialize topology
@@ -93,7 +72,7 @@ class MyTopo(Topo):
                              privateDirs=cassandra_private_dirs)
         host6 = self.addHost('h6', ip="100.0.0.16/24",
                              privateDirs=cassandra_private_dirs)
-        
+
         # Links
         self.addLink(host1, sw1, delay="0.1ms")
         self.addLink(host2, sw1, delay="0.1ms")
@@ -120,4 +99,3 @@ if __name__ == "__main__":
     # Create UC Topology instance
     topo = MyTopo()
     CLI(topo.getNet())
-
