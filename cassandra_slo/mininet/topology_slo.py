@@ -3,6 +3,7 @@ from time import sleep
 from mininet.node import OVSSwitch
 from mininet.node import RemoteController
 from mininet.cli import CLI
+from mininet.node import Switch
 from mininet.net import Mininet
 from mininet.topo import Topo
 from mininet.link import TCLink
@@ -36,7 +37,7 @@ class MyTopo(Topo):
             autoStaticArp=True,
             build=True,
             cleanup=True,
-            link=TCLink
+            link=TCLink,
         )
 
         # Start the network
