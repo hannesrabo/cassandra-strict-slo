@@ -7,10 +7,6 @@ from mininet.net import Mininet
 from mininet.topo import Topo
 from mininet.link import TCLink
 
-#For Core Pinning
-from mininet.node import Switch, CPULimitedHost
-from mininet.util import numCores
-
 
 cassandra_node_1 = 'h1'
 cassandra_node_2 = 'h2'
@@ -42,8 +38,6 @@ class MyTopo(Topo):
             build=True,
             cleanup=True,
             link=TCLink,
-            autoPinCpus=True,       #added parameter for core pinning
-            host=CPULimitedHost     #added parameter for core pinning
         )
 
         # Start the network
@@ -56,20 +50,8 @@ class MyTopo(Topo):
         self.startCassandra('h1')
         self.startCassandra('h2')
 
-    # TESTING CORE PINNING (returns number of cores)
-	numOfCores = numCores()
-	print 'The number of cores is: ', numOfCores
-
-    # Assign cores to the hosts
-	self.getHost('h1').config(cores=6)	
-	self.getHost('h2').config(cores=1)	
-	self.getHost('h3').config(cores=2)	
-	self.getHost('h4').config(cores=3)	
-	self.getHost('h5').config(cores=4)	
-	self.getHost('h6').config(cores=5)	
-   
     # Setup Database
-	#self.getHost('h1').cmd("bash database.sh") 
+	self.getHost('h1').cmd("./database.sh &") 
         
     # Make sure that everything is set up
         sleep(1)
