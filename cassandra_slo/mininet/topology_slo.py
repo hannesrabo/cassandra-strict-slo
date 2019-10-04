@@ -78,7 +78,7 @@ class MyTopo(Topo):
                              privateDirs=cassandra_private_dirs)
         host6 = self.addHost('h6', ip="100.0.0.16/24",
                              privateDirs=cassandra_private_dirs)
-        
+
         # Links
         self.addLink(host1, sw1, delay="0.1ms")
         self.addLink(host2, sw1, delay="0.1ms")
