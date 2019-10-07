@@ -3,10 +3,10 @@ from time import sleep
 from mininet.node import OVSSwitch
 from mininet.node import RemoteController
 from mininet.cli import CLI
-from mininet.node import Switch
 from mininet.net import Mininet
 from mininet.topo import Topo
 from mininet.link import TCLink
+
 
 cassandra_node_1 = 'h1'
 cassandra_node_2 = 'h2'
@@ -50,8 +50,13 @@ class MyTopo(Topo):
         self.startCassandra('h1')
         self.startCassandra('h2')
 
+        # Setup Database
+        self.getHost('h1').cmd("./database.sh &") 
+        
         # Make sure that everything is set up
         sleep(1)
+
+    
 
     def createTopology(self):
         # Initialize topology
@@ -100,3 +105,4 @@ if __name__ == "__main__":
     # Create UC Topology instance
     topo = MyTopo()
     CLI(topo.getNet())
+
