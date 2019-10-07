@@ -6,5 +6,5 @@ tar -xf jolokia-1.4.0-bin.tar.gz
 
 # Adding the option to the config file
 REPO_PATH=$(git rev-parse --show-toplevel)
-cd "$REPO_PATH/.."
-echo 'JVM_OPTS="$JVM_OPTS -javaagent:/opt/jolokia/jolokia-1.4.0/agents/jolokia-jvm.jar"' >> "$CLONED_PATH/conf/cassandra/cassandra-env.sh"
+cd "$REPO_PATH/../cassandra"
+echo 'JVM_OPTS="$JVM_OPTS -javaagent:/opt/jolokia/jolokia-1.4.0/agents/jolokia-jvm.jar"' >> conf/cassandra-env.sh
