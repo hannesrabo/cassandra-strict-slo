@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+
+from mininet.cli import CLI
+
+import sys
+import os
+import cassandra_slo.mininet.topology_slo as topology
+
+
+if __name__ == "__main__":
+    os.system("cat turtles_art")
+    # Create UC Topology instance
+    topo = topology.MyTopo()
+    CLI(topo.getNet())
