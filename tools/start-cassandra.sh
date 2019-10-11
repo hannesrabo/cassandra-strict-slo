@@ -29,5 +29,7 @@ cp "$REPO_PATH/tools/res/cassandra.yaml" /slo/cassandra/cassandra.yaml
 
 source "$REPO_PATH/tools/res/create-config.sh"
 
-. "$REPO_PATH/../cassandra/bin/cassandra" -R
+. "$REPO_PATH/../cassandra/bin/cassandra" -R -d
+
+echo "Started cassandra node at: $IP_ADDRESS"
 
