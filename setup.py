@@ -7,5 +7,4 @@ setup(
     author='Hannes Rabo, Julius Celik, Pethrus Gärdbom, Kamil Nasr, Shubhanker Singh, Vinayak Tejankar',
     author_email='hrabo@kth.se, jcelik@kth.se, gardborn@kth.se, knasr@kth.se, shusin@kth.se, tejankar@kth.se',
     packages=['cassandra_slo'],
-    scripts=['tools/bin/pttestscript']
 )
