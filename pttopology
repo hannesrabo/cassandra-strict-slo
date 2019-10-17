@@ -8,7 +8,7 @@ import topology.topology as topology
 
 
 if __name__ == "__main__":
-    os.system("cat turtles_art")
+    os.system("cat /tools/turtles_art")
     # Create UC Topology instance
     topo = topology.MyTopo()
     CLI(topo.getNet())
