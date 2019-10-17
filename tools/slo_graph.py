@@ -70,8 +70,8 @@ def slo_plot():
 
 if __name__ == "__main__":
      if len(sys.argv)<2:
-	print "Please enter file name as argument"
-	exit()
+        print "Please enter file name as argument"
+        exit()
      else:
         #print len(sys.argv)
         slo_parse(str(sys.argv[1]))
