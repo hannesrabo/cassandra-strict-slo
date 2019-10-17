@@ -11,21 +11,21 @@ def slo_parse(filename):
        line = fp.readline()
        cnt = 1
        while line:
-           print("Lines is: {}".format(line.strip()))
+           #print("Lines is: {}".format(line.strip()))
            line = fp.readline()
            linestr = line.strip().split(',')
            if len(linestr)>1 and str(linestr).find("CLEANUP")==-1:
-               print "linestr[1]:"+linestr[1]
+               #print "linestr[1]:"+linestr[1]
                if "PercentileLatency" in str(linestr[1]):
                    latval.append(linestr[2])
                    percentile = str(linestr[1]).strip().split("PercentileLatency")
-                   print "percentile:"+percentile[0].replace('th','')
+                   #print "percentile:"+percentile[0].replace('th','')
                    percentileth.append(percentile[0].replace('th',''))
                    opcode.append(linestr[0])
-           print len(linestr)
+           #print len(linestr)
 
-    print percentileth
-    print latval
+    #print percentileth
+    #print latval
 
     with open("slo_parsed_output","w") as filehandle:
         opcode_test = opcode[0]
@@ -49,10 +49,10 @@ def slo_plot():
         while line:
             linestr = line.strip().split(',')
             if str(line).find(']')!=-1:
-                print str(line)
+                #print str(line)
                 operation.append(str(line))
                 temp = temp + 1
-                print temp
+                #print temp
             if len(linestr)>1 and temp%2==1:
                 x_a.append(float(linestr[1]))
                 y_a.append(float(linestr[0]))
@@ -73,6 +73,6 @@ if __name__ == "__main__":
 	print "Please enter file name as argument"
 	exit()
      else:
-        print len(sys.argv)
+        #print len(sys.argv)
         slo_parse(str(sys.argv[1]))
         slo_plot()
