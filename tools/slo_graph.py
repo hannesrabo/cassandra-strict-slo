@@ -46,7 +46,7 @@ def slo_parse(filename):
 
 def slo_plot(filename):
     global parsed_file
-    print parsed_file
+    print(parsed_file)
     x_a = []
     y_a = []
     x_b = []
