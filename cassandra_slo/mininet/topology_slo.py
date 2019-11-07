@@ -49,9 +49,11 @@ class MyTopo(Topo):
 
         self.startCassandra('h1')
         self.startCassandra('h2')
-
-        # Setup Database
-        self.getHost('h1').cmd("./tools/database.sh &") 
+        self.startCassandra('h3')
+        self.startCassandra('h4')
+        
+	# Setup Database
+        self.getHost('h1').cmd("./database.sh &") 
         
         # Make sure that everything is set up
         sleep(1)

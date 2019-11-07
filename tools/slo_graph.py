@@ -1,8 +1,13 @@
+#!/usr/bin/env python
+
 import matplotlib.pyplot as plt
 import csv
 import sys
 
+
+parsed_file = ""
 def slo_parse(filename):
+    global parsed_file
     filepath = filename
     percentileth=[]
     latval = []
@@ -27,7 +32,7 @@ def slo_parse(filename):
     #print percentileth
     #print latval
 
-    with open("slo_parsed_output","w") as filehandle:
+    with open("/home/csd/cassandra-strict-slo/"+filename+"_parsed_output","w") as filehandle:
         opcode_test = opcode[0]
         filehandle.write('%s \n' % str(opcode[0]))
         for valPer,valLat,valop in zip(percentileth,latval,opcode):
@@ -36,15 +41,19 @@ def slo_parse(filename):
                 opcode_test = valop
             filehandle.write('%s,%s\n' % (str(valPer),str(valLat)))
         filehandle.close()
+    parsed_file = "/home/csd/cassandra-strict-slo/"+filename+"_parsed_output"
+    print ("Parsed output file available at /home/csd/cassandra-strict-slo/"+filename+"_parsed_output")
 
-def slo_plot():
+def slo_plot(filename):
+    global parsed_file
+    print parsed_file
     x_a = []
     y_a = []
     x_b = []
     y_b = []
     operation = []
     temp = 0
-    with open('slo_parsed_output','r') as fp:
+    with open(parsed_file,'r') as fp:
         line = fp.readline()
         while line:
             linestr = line.strip().split(',')
@@ -64,15 +73,16 @@ def slo_plot():
     plt.plot(x_b,y_b, label=str(operation[1]))
     plt.xlabel('Latency (us)')
     plt.ylabel('Request Percentile')
-    plt.title('Interesting Graph\nCheck it out')
+    plt.title('SLO Tail latency for Cassandra')
     plt.legend()
     plt.show()
 
 if __name__ == "__main__":
      if len(sys.argv)<2:
-        print ("Please enter file name as argument")
+        print ("Please enter file name as argument 1 and to Plot 'plot' as the 2nd argument")
         exit()
      else:
         #print len(sys.argv)
         slo_parse(str(sys.argv[1]))
-        slo_plot()
+        if len(sys.argv)>2:
+           slo_plot(str(sys.argv[1]))
