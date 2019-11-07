@@ -5,7 +5,7 @@ import sys
 import os
 
 if len(sys.argv) <= 1:
-    print "Please enter a filename prefix"
+    print ("Please enter a filename prefix")
     exit()
 
 filename_prefix = sys.argv[1]
