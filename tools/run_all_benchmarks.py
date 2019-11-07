@@ -13,6 +13,6 @@ operation_targets = [500, 600, 700, 800, 900, 1000, 1100, 1200]
 
 for target in operation_targets:
     filename = filename_prefix + "_" + str(target)
-    print "Running benchmark for file: " + filename
+    print ("Running benchmark for file: " + filename)
     os.system("./tools/run_workload.py " + filename + " " + str(target))
 
