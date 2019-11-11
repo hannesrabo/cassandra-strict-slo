@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # Parse output from YCSB and output start- and end-timestamp
 
+import sys
 import re
 
 if len(sys.argv) <= 1:
