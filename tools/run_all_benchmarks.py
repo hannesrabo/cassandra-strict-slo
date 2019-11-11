@@ -3,13 +3,15 @@
 
 import sys
 import os
+import numpy as np
+
 
 if len(sys.argv) <= 1:
     print ("Please enter a filename prefix")
     exit()
 
 filename_prefix = sys.argv[1]
-operation_targets = [500, 600, 700, 800, 900, 1000, 1100, 1200]
+operation_targets = np.arange(400, 3600, 200).tolist()
 
 for target in operation_targets:
     filename = filename_prefix + "_" + str(target)
