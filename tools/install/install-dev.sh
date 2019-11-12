@@ -12,4 +12,4 @@ pip3 install -r requirements.txt
 
 # Setting up githooks
 REPO_PATH=$(git rev-parse --show-toplevel)
-ln -s "$REPO_PATH/tools/pre-commit.sh" "$REPO_PATH/.git/hooks/pre-commit"
+ln -s "$REPO_PATH/tools/install/pre-commit.sh" "$REPO_PATH/.git/hooks/pre-commit"
