@@ -24,7 +24,7 @@ print("Running workload...")
 # If no ops/sec argument is given, YCSB runs at maximum ops/sec
 target_string = ""
 if len(sys.argv) > 3:
-    target_string = " -target " + op_sec
+    target_string = " -target " + op_sec + " -p target=" + op_sec
 
 os.system("./bin/ycsb run cassandra2-cql -p hosts='100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14' -p cassandra.speculative=" +
           threshold + " -P workloads/workloadb -s -threads 10" + target_string + " > " + rfile + " 2> " + rfile + "_stderr")
