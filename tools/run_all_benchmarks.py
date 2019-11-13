@@ -11,8 +11,8 @@ if len(sys.argv) <= 1:
     exit()
 
 filename_prefix = sys.argv[1]
-operation_targets = np.arange(400, 3600, 200).tolist()
-sr_thresholds = np.arange(1, 20, 1).tolist()
+operation_targets = np.arange(400, 3600 + 1, 200).tolist()
+sr_thresholds = np.arange(1, 20 + 1, 1).tolist()
 
 for threshold in sr_thresholds:
     for target in operation_targets:
