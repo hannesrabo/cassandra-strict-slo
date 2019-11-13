@@ -47,5 +47,5 @@ for threshold in sr_thresholds:
     for target in operation_targets:
         filename = filename_prefix + "_" + str(threshold) + "_" + str(target)
         print("Running benchmark for file: " + filename)
-        # os.system("./tools/run_workload.py " + filename +
-        #           " " + str(threshold) + " " + str(target))
+        os.system("./tools/run_workload.py " + filename +
+                  " " + str(threshold) + " " + str(target))
