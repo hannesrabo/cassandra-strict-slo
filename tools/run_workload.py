@@ -17,7 +17,7 @@ threshold = sys.argv[2]
 
 print("Loading workloads...")
 os.chdir("/home/csd/YCSB/")
-os.system("./bin/ycsb load cassandra2-cql -p hosts='100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14' -P workloads/workloadb -s -threads 10 > slo_workload_load.out")
+os.system("./bin/ycsb load cassandra2-cql -p hosts='100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14' -P workloads/workloadb -s -threads 10 &>/dev/null")
 print("Loading... Done..")
 print("Running workload...")
 
