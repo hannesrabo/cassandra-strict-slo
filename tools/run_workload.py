@@ -21,6 +21,9 @@ os.system("./bin/ycsb load cassandra2-cql -p hosts='100.0.0.11,100.0.0.12,100.0.
 print("Loading... Done..")
 print("Running workload...")
 
+# Remove old performance files
+os.system("rm -f /home/csd/cassandra-strict-slo/performance/*")
+
 # If no ops/sec argument is given, YCSB runs at maximum ops/sec
 target_string = ""
 if len(sys.argv) > 3:
@@ -30,6 +33,21 @@ os.system("./bin/ycsb run cassandra2-cql -p hosts='100.0.0.11,100.0.0.12,100.0.0
           threshold + " -P workloads/workloadb -s -threads 10" + target_string + " > " + rfile + " 2> " + rfile + "_stderr")
 
 print("Benchmarking done...")
+
+# Checking that the benchmark was finished
+print("Checking benchmark")
+file = open(rfile, "r")
+benchmark_result = file.read()
+if benchmark_result.find("[READ]") == -1:
+    print("The benchmark is corrupt. Exiting")
+    exit()
+
+
 os.system("mv "+rfile+" /home/csd/cassandra-strict-slo/results")
 os.system("mv "+rfile+"_stderr /home/csd/cassandra-strict-slo/results")
-print("Results available in "+rfile+" in project root directory!")
+
+os.system("mkdir /home/csd/cassandra-strict-slo/results/"+rfile+"_metrics")
+os.system("mv /home/csd/cassandra-strict-slo/performance/* /home/csd/cassandra-strict-slo/results/"+rfile+"_metrics")
+
+print("Results available in "+rfile+" in results directory!")
+
