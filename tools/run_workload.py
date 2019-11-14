@@ -38,7 +38,7 @@ print("Benchmarking done...")
 print("Checking benchmark")
 file = open(rfile, "r")
 benchmark_result = file.read()
-if bencmark_result.find("[READ]") == -1:
+if benchmark_result.find("[READ]") == -1:
     print("The benchmark is corrupt. Exiting")
     exit()
 
