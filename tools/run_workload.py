@@ -46,8 +46,8 @@ if benchmark_result.find("[READ]") == -1:
 os.system("mv "+rfile+" /home/csd/cassandra-strict-slo/results")
 os.system("mv "+rfile+"_stderr /home/csd/cassandra-strict-slo/results")
 
-os.system("mkdir /home/csd/cassandra-strict-slo/"+rfile+"_metrics")
-os.system("mv /home/csd/cassandra-strict-slo/performance/* /home/csd/cassandra-strict-slo/"+rfile+"_metrics")
+os.system("mkdir /home/csd/cassandra-strict-slo/results/"+rfile+"_metrics")
+os.system("mv /home/csd/cassandra-strict-slo/performance/* /home/csd/cassandra-strict-slo/results/"+rfile+"_metrics")
 
 print("Results available in "+rfile+" in results directory!")
 
