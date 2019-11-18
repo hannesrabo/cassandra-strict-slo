@@ -58,16 +58,16 @@ class MyTopo(Topo):
         self.startCassandra('h4')
 
         # TESTING CORE PINNING (returns number of cores)
-        numOfCores = numCores()
-        print 'The number of cores is: ', numOfCores
+        # numOfCores = numCores()
+        # print 'The number of cores is: ', numOfCores
 
         # Assign cores to the hosts
-        self.getHost('h1').config(cores=0)	
-        self.getHost('h2').config(cores=1)	
-        self.getHost('h3').config(cores=2)	
-        self.getHost('h4').config(cores=3)	
-        self.getHost('h5').config(cores=4)	
-        self.getHost('h6').config(cores=5)	
+        # Starting at cores=1 because 0 seem to be reserved
+        self.getHost('h1').config(cores=1)
+        self.getHost('h2').config(cores=2)	
+        self.getHost('h3').config(cores=3)	
+        self.getHost('h4').config(cores=4)	
+        self.getHost('h5').config(cores=5)	
  
 	# Setup Database
         self.getHost('h1').cmd("./tools/database.sh &") 
@@ -95,8 +95,6 @@ class MyTopo(Topo):
                              privateDirs=cassandra_private_dirs)
         host5 = self.addHost('h5', ip="100.0.0.15/24",
                              privateDirs=cassandra_private_dirs)
-        host6 = self.addHost('h6', ip="100.0.0.16/24",
-                             privateDirs=cassandra_private_dirs)
 
         # Links
         self.addLink(host1, sw1, delay="0.1ms")
@@ -104,7 +102,6 @@ class MyTopo(Topo):
         self.addLink(host3, sw1, delay="0.1ms")
         self.addLink(host4, sw1, delay="0.1ms")
         self.addLink(host5, sw1, delay="0.1ms")
-        self.addLink(host6, sw1, delay="0.1ms")
 
     def getNet(self):
         return self.net
