@@ -1,0 +1,80 @@
+[WARN]  The 'cassandra2-cql' client has been deprecated. It has been renamed to simply 'cassandra-cql'. This alias will be removed in the next YCSB release.
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl com.yahoo.ycsb:cassandra-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+java -cp /home/csd/YCSB/cassandra/conf:/home/csd/YCSB/cassandra/target/cassandra-binding-0.17.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar:/root/.m2/repository/org/apache/httpcomponents/fluent-hc/4.3.3/fluent-hc-4.3.3.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient-osgi/4.3.3/httpclient-osgi-4.3.3.jar:/root/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar:/root/.m2/repository/com/datastax/cassandra/cassandra-driver-core/3.0.0/cassandra-driver-core-3.0.0.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar:/root/.m2/repository/io/netty/netty-handler/4.0.33.Final/netty-handler-4.0.33.Final.jar:/home/csd/YCSB/core/target/core-0.17.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient-cache/4.3.3/httpclient-cache-4.3.3.jar:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/root/.m2/repository/org/jolokia/jolokia-client-java/1.2.2/jolokia-client-java-1.2.2.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/root/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/root/.m2/repository/io/netty/netty-transport/4.0.33.Final/netty-transport-4.0.33.Final.jar:/root/.m2/repository/io/netty/netty-codec/4.0.33.Final/netty-codec-4.0.33.Final.jar:/root/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/root/.m2/repository/org/apache/httpcomponents/httpmime/4.3.3/httpmime-4.3.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.2/commons-codec-1.2.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/root/.m2/repository/io/netty/netty-buffer/4.0.33.Final/netty-buffer-4.0.33.Final.jar:/root/.m2/repository/io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final.jar:/root/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar com.yahoo.ycsb.Client -db com.yahoo.ycsb.db.CassandraCQLClient -p hosts=100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14 -p cassandra.speculative=31 -P workloads/workloadb -s -threads 32 -target 4500 -p target=4500 -t
+Command line: -db com.yahoo.ycsb.db.CassandraCQLClient -p hosts=100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14 -p cassandra.speculative=31 -P workloads/workloadb -s -threads 32 -target 4500 -p target=4500 -t
+YCSB Client 0.17.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2019-11-30 04:17:56:499 0 sec: 0 operations; est completion in 0 second 
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.PlatformDependent0 (file:/root/.m2/repository/io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.PlatformDependent0
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Nov 30, 2019 4:17:56 AM io.netty.util.internal.PlatformDependent <clinit>
+INFO: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2019-11-30 04:18:06:362 10 sec: 23549 operations; 2354.9 current ops/sec; est completion in 6 minutes [READ: Count=22382, Max=330495, Min=1024, Avg=10335.88, 90=19279, 99=45151, 99.9=258815, 99.99=315903] [UPDATE: Count=1170, Max=280575, Min=1494, Avg=11311, 90=19455, 99=95423, 99.9=161535, 99.99=280575] 
+2019-11-30 04:18:16:361 20 sec: 76066 operations; 5251.7 current ops/sec; est completion in 4 minutes [READ: Count=49893, Max=51583, Min=895, Avg=6069.62, 90=11991, 99=19663, 99.9=31919, 99.99=40767] [UPDATE: Count=2621, Max=39135, Min=1062, Avg=6262.26, 90=12367, 99=20047, 99.9=35295, 99.99=39135] 
+2019-11-30 04:18:26:361 30 sec: 124496 operations; 4843 current ops/sec; est completion in 3 minutes [READ: Count=45969, Max=55647, Min=834, Avg=3857.31, 90=7103, 99=16031, 99.9=27711, 99.99=38399] [UPDATE: Count=2461, Max=33631, Min=915, Avg=4154.06, 90=8271, 99=16895, 99.9=31375, 99.99=33631] 
+2019-11-30 04:18:36:361 40 sec: 169502 operations; 4500.6 current ops/sec; est completion in 3 minutes [READ: Count=42724, Max=66751, Min=851, Avg=2963.31, 90=4767, 99=15279, 99.9=39359, 99.99=58527] [UPDATE: Count=2282, Max=59775, Min=989, Avg=3189.28, 90=5311, 99=15895, 99.9=53151, 99.99=59775] 
+2019-11-30 04:18:46:362 50 sec: 214491 operations; 4498.9 current ops/sec; est completion in 3 minutes [READ: Count=42772, Max=40127, Min=891, Avg=2681.91, 90=4331, 99=12671, 99.9=24335, 99.99=31727] [UPDATE: Count=2217, Max=26463, Min=978, Avg=2921.43, 90=4727, 99=15647, 99.9=24655, 99.99=26463] 
+2019-11-30 04:18:56:361 60 sec: 259500 operations; 4500.9 current ops/sec; est completion in 2 minutes [READ: Count=42634, Max=35647, Min=855, Avg=2620.82, 90=4191, 99=13231, 99.9=26239, 99.99=33791] [UPDATE: Count=2375, Max=40735, Min=1001, Avg=2887.23, 90=4619, 99=14815, 99.9=26639, 99.99=40735] 
+2019-11-30 04:19:06:362 70 sec: 304499 operations; 4499.9 current ops/sec; est completion in 2 minutes [READ: Count=42726, Max=81919, Min=842, Avg=2632.74, 90=4147, 99=12743, 99.9=25871, 99.99=78591] [UPDATE: Count=2273, Max=76607, Min=989, Avg=2901.06, 90=4515, 99=15471, 99.9=62975, 99.99=76607] 
+2019-11-30 04:19:16:362 80 sec: 349494 operations; 4499.5 current ops/sec; est completion in 2 minutes [READ: Count=42767, Max=36159, Min=868, Avg=2712, 90=4443, 99=11295, 99.9=22063, 99.99=28927] [UPDATE: Count=2228, Max=31391, Min=967, Avg=2898.14, 90=4715, 99=13887, 99.9=23855, 99.99=31391] 
+2019-11-30 04:19:26:361 90 sec: 394504 operations; 4501 current ops/sec; est completion in 2 minutes [READ: Count=42806, Max=50495, Min=878, Avg=2557.96, 90=4077, 99=10663, 99.9=21135, 99.99=32751] [UPDATE: Count=2204, Max=29583, Min=975, Avg=2734.25, 90=4531, 99=12391, 99.9=19599, 99.99=29583] 
+2019-11-30 04:19:36:362 100 sec: 439498 operations; 4499.4 current ops/sec; est completion in 2 minutes [READ: Count=42686, Max=86719, Min=886, Avg=2648.09, 90=4155, 99=11271, 99.9=24815, 99.99=83647] [UPDATE: Count=2308, Max=83007, Min=971, Avg=2779.91, 90=4443, 99=11223, 99.9=37023, 99.99=83007] 
+2019-11-30 04:19:46:361 110 sec: 484498 operations; 4500 current ops/sec; est completion in 1 minute [READ: Count=42812, Max=41247, Min=851, Avg=2627.55, 90=4247, 99=11623, 99.9=22767, 99.99=30767] [UPDATE: Count=2188, Max=28623, Min=932, Avg=2738.2, 90=4567, 99=10855, 99.9=23727, 99.99=28623] 
+2019-11-30 04:19:56:362 120 sec: 529500 operations; 4500.2 current ops/sec; est completion in 1 minute [READ: Count=42798, Max=77247, Min=884, Avg=2473.88, 90=3827, 99=9679, 99.9=22815, 99.99=71167] [UPDATE: Count=2204, Max=51231, Min=903, Avg=2619.52, 90=4103, 99=10543, 99.9=22447, 99.99=51231] 
+2019-11-30 04:20:06:362 130 sec: 574498 operations; 4499.8 current ops/sec; est completion in 1 minute [READ: Count=42675, Max=40063, Min=858, Avg=2652.53, 90=4219, 99=10911, 99.9=22671, 99.99=35903] [UPDATE: Count=2323, Max=22959, Min=937, Avg=2819.47, 90=4687, 99=11727, 99.9=22127, 99.99=22959] 
+2019-11-30 04:20:16:361 140 sec: 619497 operations; 4499.9 current ops/sec; est completion in 1 minute [READ: Count=42686, Max=36255, Min=884, Avg=2479.33, 90=3951, 99=9855, 99.9=18671, 99.99=32895] [UPDATE: Count=2313, Max=24351, Min=942, Avg=2661.46, 90=4239, 99=10807, 99.9=20863, 99.99=24351] 
+2019-11-30 04:20:26:362 150 sec: 664497 operations; 4500 current ops/sec; est completion in 1 minute [READ: Count=42759, Max=79231, Min=886, Avg=2693.61, 90=4191, 99=11743, 99.9=25071, 99.99=69183] [UPDATE: Count=2241, Max=68031, Min=933, Avg=2732.64, 90=4343, 99=11879, 99.9=22015, 99.99=68031] 
+2019-11-30 04:20:36:361 160 sec: 709492 operations; 4499.5 current ops/sec; est completion in 1 minute [READ: Count=42687, Max=51903, Min=880, Avg=2422.8, 90=3797, 99=9311, 99.9=17311, 99.99=25695] [UPDATE: Count=2308, Max=20815, Min=961, Avg=2569.16, 90=4089, 99=10951, 99.9=17183, 99.99=20815] 
+2019-11-30 04:20:46:361 170 sec: 754492 operations; 4500 current ops/sec; est completion in 56 seconds [READ: Count=42758, Max=61215, Min=871, Avg=2591.28, 90=4077, 99=11183, 99.9=25391, 99.99=59807] [UPDATE: Count=2242, Max=58207, Min=952, Avg=2671.69, 90=4263, 99=10711, 99.9=28095, 99.99=58207] 
+2019-11-30 04:20:56:362 180 sec: 799500 operations; 4500.8 current ops/sec; est completion in 46 seconds [READ: Count=42808, Max=36127, Min=891, Avg=2433.21, 90=3815, 99=9831, 99.9=18831, 99.99=30575] [UPDATE: Count=2200, Max=23647, Min=995, Avg=2535.02, 90=3913, 99=9999, 99.9=17903, 99.99=23647] 
+2019-11-30 04:21:06:361 190 sec: 844492 operations; 4499.2 current ops/sec; est completion in 35 seconds [READ: Count=42695, Max=42975, Min=892, Avg=2418.73, 90=3751, 99=9655, 99.9=19423, 99.99=29119] [UPDATE: Count=2297, Max=30431, Min=978, Avg=2622.61, 90=4131, 99=12263, 99.9=24415, 99.99=30431] 
+2019-11-30 04:21:16:362 200 sec: 889498 operations; 4500.6 current ops/sec; est completion in 25 seconds [READ: Count=42764, Max=77823, Min=890, Avg=2445.88, 90=3771, 99=9311, 99.9=24367, 99.99=76991] [UPDATE: Count=2242, Max=29311, Min=928, Avg=2584.57, 90=4095, 99=9479, 99.9=23903, 99.99=29311] 
+2019-11-30 04:21:26:361 210 sec: 934504 operations; 4500.6 current ops/sec; est completion in 15 seconds [READ: Count=42708, Max=34719, Min=888, Avg=2461.83, 90=3847, 99=9999, 99.9=19551, 99.99=27887] [UPDATE: Count=2298, Max=33631, Min=943, Avg=2678.15, 90=4215, 99=13935, 99.9=28863, 99.99=33631] 
+2019-11-30 04:21:36:362 220 sec: 979500 operations; 4499.6 current ops/sec; est completion in 5 second [READ: Count=42731, Max=85631, Min=889, Avg=2594.24, 90=4009, 99=12215, 99.9=23263, 99.99=78975] [UPDATE: Count=2265, Max=81855, Min=960, Avg=2693.57, 90=4287, 99=10527, 99.9=24223, 99.99=81855] 
+2019-11-30 04:21:43:477 227 sec: 1000000 operations; 2880.83 current ops/sec; [READ: Count=19535, Max=38495, Min=911, Avg=2475.27, 90=3893, 99=10095, 99.9=28319, 99.99=34719] [CLEANUP: Count=32, Max=2529279, Min=3, Avg=79012.16, 90=4, 99=2529279, 99.9=2529279, 99.99=2529279] [UPDATE: Count=965, Max=27903, Min=944, Avg=2660.68, 90=4235, 99=11367, 99.9=26847, 99.99=27903] 
