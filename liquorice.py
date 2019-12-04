@@ -32,11 +32,11 @@ ycsb2_cmd_load = "python bin/ycsb load cassandra2-cql -p hosts='100.0.0.11,100.0
 ycsb1_load = subprocess.Popen(shlex.split(ycsb1_cmd_load),stdout=client1_out,stderr=client1_out)# -s > slo_workload_load_client1.out").split(),stdout=subprocess.PIPE)
 ycsb2_load = subprocess.Popen(shlex.split(ycsb2_cmd_load),stdout=client2_out,stderr=client2_out)
 while ycsb1_load.poll()==None:
-    print "Loading YCSB1"
+    print("Loading YCSB1")
     time.sleep(10)
 client1_out.close()
 while ycsb2_load.poll()==None:
-    print "Loading YCSB2"
+    print("Loading YCSB2")
     time.sleep(10)
 client2_out.close()
 ycsb2_cmd_run = "python bin/ycsb run cassandra2-cql -p hosts='100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14' -P workloads/workloadb -threads 12 -s -p cassandra.speculative=" + threshold
