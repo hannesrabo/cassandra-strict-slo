@@ -4,7 +4,7 @@ from mininet.cli import CLI
 
 import sys
 import os
-import topology.topology as topology
+import topology.mininet_topology as topology
 
 
 if __name__ == "__main__":
