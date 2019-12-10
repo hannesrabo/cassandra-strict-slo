@@ -1,0 +1,288 @@
+[WARN]  The 'cassandra2-cql' client has been deprecated. It has been renamed to simply 'cassandra-cql'. This alias will be removed in the next YCSB release.
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl com.yahoo.ycsb:cassandra-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+java -cp /home/csd/YCSB/cassandra/conf:/home/csd/YCSB/cassandra/target/cassandra-binding-0.17.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar:/root/.m2/repository/org/apache/httpcomponents/fluent-hc/4.3.3/fluent-hc-4.3.3.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient-osgi/4.3.3/httpclient-osgi-4.3.3.jar:/root/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar:/root/.m2/repository/com/datastax/cassandra/cassandra-driver-core/3.0.0/cassandra-driver-core-3.0.0.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar:/root/.m2/repository/io/netty/netty-handler/4.0.33.Final/netty-handler-4.0.33.Final.jar:/home/csd/YCSB/core/target/core-0.17.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient-cache/4.3.3/httpclient-cache-4.3.3.jar:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/root/.m2/repository/org/jolokia/jolokia-client-java/1.2.2/jolokia-client-java-1.2.2.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/root/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/root/.m2/repository/io/netty/netty-transport/4.0.33.Final/netty-transport-4.0.33.Final.jar:/root/.m2/repository/io/netty/netty-codec/4.0.33.Final/netty-codec-4.0.33.Final.jar:/root/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/root/.m2/repository/org/apache/httpcomponents/httpmime/4.3.3/httpmime-4.3.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.2/commons-codec-1.2.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/root/.m2/repository/io/netty/netty-buffer/4.0.33.Final/netty-buffer-4.0.33.Final.jar:/root/.m2/repository/io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final.jar:/root/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar com.yahoo.ycsb.Client -db com.yahoo.ycsb.db.CassandraCQLClient -p hosts=100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14 -P workloads/workloadb -threads 12 -s -load
+Command line: -db com.yahoo.ycsb.db.CassandraCQLClient -p hosts=100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14 -P workloads/workloadb -threads 12 -s -load
+YCSB Client 0.17.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Speculative execution policy: 1
+Target operations: 0
+2019-12-06 17:05:51:502 0 sec: 0 operations; est completion in 0 second 
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.PlatformDependent0 (file:/root/.m2/repository/io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.PlatformDependent0
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Dec 06, 2019 5:05:52 PM io.netty.util.internal.PlatformDependent <clinit>
+INFO: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Performance thread started: 2019-12-06 17:05:55.934
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/perf_1_0_100.0.0.11
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/perf_1_0_100.0.0.12
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/perf_1_0_100.0.0.13
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/perf_1_0_100.0.0.14
+Performance collection stopped: 2019-12-06 17:06:00.296
+2019-12-06 17:06:01:132 9 sec: 1000 operations; 101.46 current ops/sec; [CLEANUP: Count=12, Max=3090431, Min=3, Avg=257453.92, 90=9, 99=3090431, 99.9=3090431, 99.99=3090431] [INSERT: Count=1000, Max=314111, Min=1699, Avg=25619.32, 90=41631, 99=188799, 99.9=305407, 99.99=314111] 
+[OVERALL], RunTime(ms), 9856
+[OVERALL], Throughput(ops/sec), 101.46103896103897
+[TOTAL_GCS_Copy], Count, 1
+[TOTAL_GC_TIME_Copy], Time(ms), 45
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.4565746753246753
+[TOTAL_GCS_MarkSweepCompact], Count, 0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 45
+[TOTAL_GC_TIME_%], Time(%), 0.4565746753246753
+[CLEANUP], Operations, 12
+[CLEANUP], AverageLatency(us), 257453.91666666666
+[CLEANUP], MinLatency(us), 3
+[CLEANUP], MaxLatency(us), 3090431
+[CLEANUP], 10thPercentileLatency(us), 3
+[CLEANUP], 20thPercentileLatency(us), 3
+[CLEANUP], 30thPercentileLatency(us), 3
+[CLEANUP], 40thPercentileLatency(us), 3
+[CLEANUP], 50thPercentileLatency(us), 3
+[CLEANUP], 60thPercentileLatency(us), 3
+[CLEANUP], 70thPercentileLatency(us), 3
+[CLEANUP], 80thPercentileLatency(us), 3
+[CLEANUP], 90thPercentileLatency(us), 9
+[CLEANUP], 95thPercentileLatency(us), 9
+[CLEANUP], 96thPercentileLatency(us), 3090431
+[CLEANUP], 97thPercentileLatency(us), 3090431
+[CLEANUP], 98thPercentileLatency(us), 3090431
+[CLEANUP], 99thPercentileLatency(us), 3090431
+[CLEANUP], 99.1PercentileLatency(us), 3090431
+[CLEANUP], 99.2PercentileLatency(us), 3090431
+[CLEANUP], 99.3PercentileLatency(us), 3090431
+[CLEANUP], 99.4PercentileLatency(us), 3090431
+[CLEANUP], 99.5PercentileLatency(us), 3090431
+[CLEANUP], 99.6PercentileLatency(us), 3090431
+[CLEANUP], 99.7PercentileLatency(us), 3090431
+[CLEANUP], 99.8PercentileLatency(us), 3090431
+[CLEANUP], 99.85PercentileLatency(us), 3090431
+[CLEANUP], 99.89PercentileLatency(us), 3090431
+[CLEANUP], 99.9PercentileLatency(us), 3090431
+[INSERT], Operations, 1000
+[INSERT], AverageLatency(us), 25619.318
+[INSERT], MinLatency(us), 1699
+[INSERT], MaxLatency(us), 314111
+[INSERT], 10thPercentileLatency(us), 8119
+[INSERT], 20thPercentileLatency(us), 11831
+[INSERT], 30thPercentileLatency(us), 14671
+[INSERT], 40thPercentileLatency(us), 17375
+[INSERT], 50thPercentileLatency(us), 20431
+[INSERT], 60thPercentileLatency(us), 24207
+[INSERT], 70thPercentileLatency(us), 28015
+[INSERT], 80thPercentileLatency(us), 32751
+[INSERT], 90thPercentileLatency(us), 41631
+[INSERT], 95thPercentileLatency(us), 50687
+[INSERT], 96thPercentileLatency(us), 55135
+[INSERT], 97thPercentileLatency(us), 60415
+[INSERT], 98thPercentileLatency(us), 68415
+[INSERT], 99thPercentileLatency(us), 188799
+[INSERT], 99.1PercentileLatency(us), 209535
+[INSERT], 99.2PercentileLatency(us), 241919
+[INSERT], 99.3PercentileLatency(us), 250239
+[INSERT], 99.4PercentileLatency(us), 265983
+[INSERT], 99.5PercentileLatency(us), 274943
+[INSERT], 99.6PercentileLatency(us), 278015
+[INSERT], 99.7PercentileLatency(us), 294143
+[INSERT], 99.8PercentileLatency(us), 303615
+[INSERT], 99.85PercentileLatency(us), 305407
+[INSERT], 99.89PercentileLatency(us), 305407
+[INSERT], 99.9PercentileLatency(us), 305407
+[INSERT], Return=OK, 1000
+2019-12-06 17:05:00.797880[WARN]  The 'cassandra2-cql' client has been deprecated. It has been renamed to simply 'cassandra-cql'. This alias will be removed in the next YCSB release.
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl com.yahoo.ycsb:cassandra-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+java -cp /home/csd/YCSB/cassandra/conf:/home/csd/YCSB/cassandra/target/cassandra-binding-0.17.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar:/root/.m2/repository/org/apache/httpcomponents/fluent-hc/4.3.3/fluent-hc-4.3.3.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient-osgi/4.3.3/httpclient-osgi-4.3.3.jar:/root/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar:/root/.m2/repository/com/datastax/cassandra/cassandra-driver-core/3.0.0/cassandra-driver-core-3.0.0.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar:/root/.m2/repository/io/netty/netty-handler/4.0.33.Final/netty-handler-4.0.33.Final.jar:/home/csd/YCSB/core/target/core-0.17.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient-cache/4.3.3/httpclient-cache-4.3.3.jar:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/root/.m2/repository/org/jolokia/jolokia-client-java/1.2.2/jolokia-client-java-1.2.2.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/root/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/root/.m2/repository/io/netty/netty-transport/4.0.33.Final/netty-transport-4.0.33.Final.jar:/root/.m2/repository/io/netty/netty-codec/4.0.33.Final/netty-codec-4.0.33.Final.jar:/root/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/root/.m2/repository/org/apache/httpcomponents/httpmime/4.3.3/httpmime-4.3.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.2/commons-codec-1.2.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/root/.m2/repository/io/netty/netty-buffer/4.0.33.Final/netty-buffer-4.0.33.Final.jar:/root/.m2/repository/io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final.jar:/root/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar com.yahoo.ycsb.Client -db com.yahoo.ycsb.db.CassandraCQLClient -p hosts=100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14 -P workloads/workloadb -threads 12 -s -p cassandra.speculative=40 -p performance.prefix=Client2 -t
+Command line: -db com.yahoo.ycsb.db.CassandraCQLClient -p hosts=100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14 -P workloads/workloadb -threads 12 -s -p cassandra.speculative=40 -p performance.prefix=Client2 -t
+YCSB Client 0.17.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Speculative execution policy: 40
+Target operations: 0
+2019-12-06 17:07:04:109 0 sec: 0 operations; est completion in 0 second 
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.PlatformDependent0 (file:/root/.m2/repository/io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.PlatformDependent0
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Dec 06, 2019 5:07:04 PM io.netty.util.internal.PlatformDependent <clinit>
+INFO: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Performance thread started: 2019-12-06 17:07:08.368
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/Client2_40_0_100.0.0.11
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/Client2_40_0_100.0.0.12
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/Client2_40_0_100.0.0.13
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/Client2_40_0_100.0.0.14
+2019-12-06 17:07:13:882 10 sec: 9464 operations; 946.4 current ops/sec; est completion in 17 minutes [READ: Count=9007, Max=241535, Min=991, Avg=6993.99, 90=15183, 99=29119, 99.9=210687, 99.99=240383] [UPDATE: Count=458, Max=79743, Min=1197, Avg=7412.47, 90=14519, 99=51423, 99.9=79743, 99.99=79743] 
+2019-12-06 17:07:23:882 20 sec: 34665 operations; 2520.1 current ops/sec; est completion in 9 minutes [READ: Count=23969, Max=55775, Min=918, Avg=4726.01, 90=10527, 99=22575, 99.9=36319, 99.99=55103] [UPDATE: Count=1231, Max=44575, Min=1081, Avg=5139.39, 90=11007, 99=25199, 99.9=36639, 99.99=44575] 
+2019-12-06 17:07:33:890 30 sec: 52261 operations; 1758.02 current ops/sec; est completion in 9 minutes [READ: Count=16698, Max=103615, Min=967, Avg=6789.06, 90=12247, 99=23551, 99.9=52383, 99.99=65599] [UPDATE: Count=898, Max=48479, Min=1063, Avg=7015.94, 90=12959, 99=23279, 99.9=38335, 99.99=48479] 
+2019-12-06 17:07:43:886 40 sec: 73380 operations; 2112.75 current ops/sec; est completion in 8 minutes [READ: Count=20075, Max=50751, Min=913, Avg=5660.74, 90=10399, 99=18367, 99.9=33919, 99.99=48959] [UPDATE: Count=1044, Max=29295, Min=1079, Avg=5804.06, 90=10735, 99=18335, 99.9=28927, 99.99=29295] 
+2019-12-06 17:07:53:886 50 sec: 97633 operations; 2425.3 current ops/sec; est completion in 7 minutes [READ: Count=23002, Max=112255, Min=897, Avg=4922.62, 90=9159, 99=16495, 99.9=38655, 99.99=99583] [UPDATE: Count=1251, Max=87231, Min=1043, Avg=5270.56, 90=9935, 99=19167, 99.9=42143, 99.99=87231] 
+2019-12-06 17:08:03:886 60 sec: 123339 operations; 2570.6 current ops/sec; est completion in 7 minutes [READ: Count=24371, Max=49439, Min=857, Avg=4653.81, 90=8895, 99=16831, 99.9=31135, 99.99=40959] [UPDATE: Count=1335, Max=47647, Min=975, Avg=4836.54, 90=9519, 99=17567, 99.9=21999, 99.99=47647] 
+2019-12-06 17:08:13:886 70 sec: 151825 operations; 2848.6 current ops/sec; est completion in 6 minutes [READ: Count=27074, Max=48927, Min=838, Avg=4195, 90=8255, 99=15887, 99.9=32431, 99.99=41951] [UPDATE: Count=1412, Max=25759, Min=995, Avg=4430.56, 90=8887, 99=16863, 99.9=23663, 99.99=25759] 
+2019-12-06 17:08:23:881 80 sec: 208556 operations; 5675.94 current ops/sec; est completion in 5 minutes [READ: Count=53830, Max=86463, Min=819, Avg=2099.59, 90=3093, 99=9111, 99.9=22015, 99.99=78591] [UPDATE: Count=2901, Max=41631, Min=902, Avg=2294.02, 90=3457, 99=10207, 99.9=24511, 99.99=41631] 
+2019-12-06 17:08:33:881 90 sec: 267785 operations; 5922.9 current ops/sec; est completion in 4 minutes [READ: Count=56249, Max=23263, Min=817, Avg=2010.98, 90=2949, 99=7475, 99.9=15215, 99.99=22495] [UPDATE: Count=2980, Max=22159, Min=858, Avg=2184.68, 90=3321, 99=8671, 99.9=14487, 99.99=22159] 
+2019-12-06 17:08:43:881 100 sec: 326064 operations; 5827.9 current ops/sec; est completion in 3 minutes [READ: Count=55263, Max=75455, Min=818, Avg=2046.73, 90=3029, 99=8535, 99.9=18383, 99.99=69119] [UPDATE: Count=3016, Max=74111, Min=898, Avg=2179.77, 90=3261, 99=8567, 99.9=21647, 99.99=74111] 
+2019-12-06 17:08:53:881 110 sec: 387420 operations; 6135.6 current ops/sec; est completion in 2 minutes [READ: Count=58383, Max=24607, Min=832, Avg=1942.56, 90=2905, 99=6475, 99.9=15311, 99.99=21791] [UPDATE: Count=2973, Max=20655, Min=871, Avg=2102.15, 90=3243, 99=7555, 99.9=18991, 99.99=20655] 
+2019-12-06 17:09:03:881 120 sec: 447663 operations; 6024.3 current ops/sec; est completion in 2 minutes [READ: Count=57173, Max=30399, Min=827, Avg=1977.66, 90=2969, 99=6687, 99.9=16415, 99.99=24703] [UPDATE: Count=3070, Max=22015, Min=892, Avg=2149.55, 90=3295, 99=8471, 99.9=15727, 99.99=22015] 
+2019-12-06 17:09:13:881 130 sec: 502673 operations; 5501 current ops/sec; est completion in 2 minutes [READ: Count=52244, Max=75775, Min=821, Avg=2166.4, 90=3377, 99=8639, 99.9=16815, 99.99=68287] [UPDATE: Count=2766, Max=67967, Min=856, Avg=2357.33, 90=3739, 99=9111, 99.9=18751, 99.99=67967] 
+2019-12-06 17:09:23:881 140 sec: 541801 operations; 3912.8 current ops/sec; est completion in 1 minute [READ: Count=37268, Max=27647, Min=810, Avg=3048.93, 90=6331, 99=12927, 99.9=19695, 99.99=22271] [UPDATE: Count=1860, Max=21135, Min=905, Avg=3305.59, 90=6627, 99=13471, 99.9=18943, 99.99=21135] 
+2019-12-06 17:09:33:881 150 sec: 579216 operations; 3741.5 current ops/sec; est completion in 1 minute [READ: Count=35520, Max=27999, Min=779, Avg=3191.88, 90=6907, 99=14119, 99.9=20735, 99.99=23791] [UPDATE: Count=1895, Max=17807, Min=883, Avg=3396.34, 90=7239, 99=14463, 99.9=17471, 99.99=17807] 
+2019-12-06 17:09:43:881 160 sec: 616561 operations; 3734.5 current ops/sec; est completion in 1 minute [READ: Count=35420, Max=74559, Min=808, Avg=3195.74, 90=7291, 99=13511, 99.9=20335, 99.99=65087] [UPDATE: Count=1925, Max=68223, Min=891, Avg=3431.36, 90=7519, 99=14295, 99.9=19999, 99.99=68223] 
+2019-12-06 17:09:53:881 170 sec: 651809 operations; 3524.8 current ops/sec; est completion in 1 minute [READ: Count=33415, Max=45951, Min=785, Avg=3385.89, 90=7583, 99=14807, 99.9=23599, 99.99=44191] [UPDATE: Count=1833, Max=42399, Min=909, Avg=3624.05, 90=7807, 99=15319, 99.9=23503, 99.99=42399] 
+2019-12-06 17:10:03:881 180 sec: 690222 operations; 3841.3 current ops/sec; est completion in 1 minute [READ: Count=36424, Max=32639, Min=796, Avg=3107.82, 90=7279, 99=12959, 99.9=20367, 99.99=25663] [UPDATE: Count=1989, Max=23391, Min=891, Avg=3329.41, 90=7487, 99=12007, 99.9=16367, 99.99=23391] 
+2019-12-06 17:10:13:881 190 sec: 728254 operations; 3803.2 current ops/sec; est completion in 1 minute [READ: Count=36119, Max=36767, Min=774, Avg=3134.27, 90=7243, 99=13071, 99.9=22399, 99.99=27551] [UPDATE: Count=1913, Max=32047, Min=915, Avg=3452.05, 90=7751, 99=12519, 99.9=19903, 99.99=32047] 
+2019-12-06 17:10:23:881 200 sec: 768677 operations; 4042.3 current ops/sec; est completion in 1 minute [READ: Count=38364, Max=87807, Min=793, Avg=2950.44, 90=6435, 99=12815, 99.9=20447, 99.99=76351] [UPDATE: Count=2059, Max=82815, Min=921, Avg=3205.07, 90=7171, 99=12615, 99.9=21567, 99.99=82815] 
+2019-12-06 17:10:33:881 210 sec: 798853 operations; 3017.6 current ops/sec; est completion in 53 seconds [READ: Count=28671, Max=61695, Min=794, Avg=3952.4, 90=8295, 99=19423, 99.9=29791, 99.99=46303] [UPDATE: Count=1505, Max=27983, Min=955, Avg=4286.19, 90=8887, 99=20095, 99.9=26239, 99.99=27983] 
+2019-12-06 17:10:43:881 220 sec: 830622 operations; 3176.9 current ops/sec; est completion in 45 seconds [READ: Count=30221, Max=32959, Min=839, Avg=3764.3, 90=7167, 99=13663, 99.9=23119, 99.99=27967] [UPDATE: Count=1548, Max=26719, Min=933, Avg=3962.76, 90=7527, 99=13999, 99.9=22095, 99.99=26719] 
+2019-12-06 17:10:53:881 230 sec: 862846 operations; 3222.4 current ops/sec; est completion in 37 seconds [READ: Count=30640, Max=82431, Min=824, Avg=3698.55, 90=7035, 99=13583, 99.9=24191, 99.99=69823] [UPDATE: Count=1584, Max=56671, Min=871, Avg=4080.32, 90=7819, 99=15455, 99.9=34367, 99.99=56671] 
+2019-12-06 17:11:03:881 240 sec: 894074 operations; 3122.8 current ops/sec; est completion in 29 seconds [READ: Count=29612, Max=35615, Min=837, Avg=3832.46, 90=7371, 99=13839, 99.9=27359, 99.99=33151] [UPDATE: Count=1616, Max=22431, Min=926, Avg=3964.5, 90=7695, 99=14535, 99.9=20175, 99.99=22431] 
+2019-12-06 17:11:13:881 250 sec: 925404 operations; 3133 current ops/sec; est completion in 21 seconds [READ: Count=29744, Max=70271, Min=843, Avg=3816.27, 90=7067, 99=13655, 99.9=26319, 99.99=62239] [UPDATE: Count=1586, Max=71167, Min=914, Avg=3971.93, 90=7423, 99=15311, 99.9=22735, 99.99=71167] 
+2019-12-06 17:11:23:885 260 sec: 971989 operations; 4658.5 current ops/sec; est completion in 8 second [READ: Count=44232, Max=31055, Min=819, Avg=2565.22, 90=4835, 99=10407, 99.9=19135, 99.99=26079] [UPDATE: Count=2353, Max=20991, Min=811, Avg=2680.02, 90=5135, 99=10815, 99.9=18911, 99.99=20991] 
+Performance collection stopped: 2019-12-06 17:11:30.855
+2019-12-06 17:11:31:876 267 sec: 1000000 operations; 3503.56 current ops/sec; [READ: Count=26626, Max=18863, Min=837, Avg=1847.93, 90=2797, 99=5395, 99.9=11799, 99.99=16703] [CLEANUP: Count=12, Max=3299327, Min=3, Avg=274864.83, 90=25, 99=3299327, 99.9=3299327, 99.99=3299327] [UPDATE: Count=1385, Max=13879, Min=852, Avg=2006.45, 90=3073, 99=6047, 99.9=13215, 99.99=13879] 
+[OVERALL], RunTime(ms), 267995
+[OVERALL], Throughput(ops/sec), 3731.4128994943935
+[TOTAL_GCS_Copy], Count, 118
+[TOTAL_GC_TIME_Copy], Time(ms), 402
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.15000279855967463
+[TOTAL_GCS_MarkSweepCompact], Count, 0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCs], Count, 118
+[TOTAL_GC_TIME], Time(ms), 402
+[TOTAL_GC_TIME_%], Time(%), 0.15000279855967463
+[READ], Operations, 949614
+[READ], AverageLatency(us), 3101.689680227966
+[READ], MinLatency(us), 774
+[READ], MaxLatency(us), 241535
+[READ], 10thPercentileLatency(us), 1201
+[READ], 20thPercentileLatency(us), 1406
+[READ], 30thPercentileLatency(us), 1611
+[READ], 40thPercentileLatency(us), 1850
+[READ], 50thPercentileLatency(us), 2137
+[READ], 60thPercentileLatency(us), 2505
+[READ], 70thPercentileLatency(us), 3031
+[READ], 80thPercentileLatency(us), 3969
+[READ], 90thPercentileLatency(us), 6415
+[READ], 95thPercentileLatency(us), 8663
+[READ], 96thPercentileLatency(us), 9319
+[READ], 97thPercentileLatency(us), 10175
+[READ], 98thPercentileLatency(us), 11527
+[READ], 99thPercentileLatency(us), 14167
+[READ], 99.1PercentileLatency(us), 14615
+[READ], 99.2PercentileLatency(us), 15111
+[READ], 99.3PercentileLatency(us), 15647
+[READ], 99.4PercentileLatency(us), 16303
+[READ], 99.5PercentileLatency(us), 17119
+[READ], 99.6PercentileLatency(us), 18255
+[READ], 99.7PercentileLatency(us), 19807
+[READ], 99.8PercentileLatency(us), 21839
+[READ], 99.85PercentileLatency(us), 23359
+[READ], 99.89PercentileLatency(us), 25263
+[READ], 99.9PercentileLatency(us), 25967
+[READ], Return=OK, 949614
+[CLEANUP], Operations, 12
+[CLEANUP], AverageLatency(us), 274864.8333333333
+[CLEANUP], MinLatency(us), 3
+[CLEANUP], MaxLatency(us), 3299327
+[CLEANUP], 10thPercentileLatency(us), 3
+[CLEANUP], 20thPercentileLatency(us), 3
+[CLEANUP], 30thPercentileLatency(us), 4
+[CLEANUP], 40thPercentileLatency(us), 4
+[CLEANUP], 50thPercentileLatency(us), 5
+[CLEANUP], 60thPercentileLatency(us), 6
+[CLEANUP], 70thPercentileLatency(us), 6
+[CLEANUP], 80thPercentileLatency(us), 8
+[CLEANUP], 90thPercentileLatency(us), 25
+[CLEANUP], 95thPercentileLatency(us), 25
+[CLEANUP], 96thPercentileLatency(us), 3299327
+[CLEANUP], 97thPercentileLatency(us), 3299327
+[CLEANUP], 98thPercentileLatency(us), 3299327
+[CLEANUP], 99thPercentileLatency(us), 3299327
+[CLEANUP], 99.1PercentileLatency(us), 3299327
+[CLEANUP], 99.2PercentileLatency(us), 3299327
+[CLEANUP], 99.3PercentileLatency(us), 3299327
+[CLEANUP], 99.4PercentileLatency(us), 3299327
+[CLEANUP], 99.5PercentileLatency(us), 3299327
+[CLEANUP], 99.6PercentileLatency(us), 3299327
+[CLEANUP], 99.7PercentileLatency(us), 3299327
+[CLEANUP], 99.8PercentileLatency(us), 3299327
+[CLEANUP], 99.85PercentileLatency(us), 3299327
+[CLEANUP], 99.89PercentileLatency(us), 3299327
+[CLEANUP], 99.9PercentileLatency(us), 3299327
+[UPDATE], Operations, 50386
+[UPDATE], AverageLatency(us), 3314.282836502203
+[UPDATE], MinLatency(us), 811
+[UPDATE], MaxLatency(us), 87231
+[UPDATE], 10thPercentileLatency(us), 1267
+[UPDATE], 20thPercentileLatency(us), 1479
+[UPDATE], 30thPercentileLatency(us), 1704
+[UPDATE], 40thPercentileLatency(us), 1964
+[UPDATE], 50thPercentileLatency(us), 2285
+[UPDATE], 60thPercentileLatency(us), 2687
+[UPDATE], 70thPercentileLatency(us), 3277
+[UPDATE], 80thPercentileLatency(us), 4323
+[UPDATE], 90thPercentileLatency(us), 6891
+[UPDATE], 95thPercentileLatency(us), 9175
+[UPDATE], 96thPercentileLatency(us), 9839
+[UPDATE], 97thPercentileLatency(us), 10687
+[UPDATE], 98thPercentileLatency(us), 11991
+[UPDATE], 99thPercentileLatency(us), 14831
+[UPDATE], 99.1PercentileLatency(us), 15343
+[UPDATE], 99.2PercentileLatency(us), 15831
+[UPDATE], 99.3PercentileLatency(us), 16367
+[UPDATE], 99.4PercentileLatency(us), 17119
+[UPDATE], 99.5PercentileLatency(us), 18095
+[UPDATE], 99.6PercentileLatency(us), 19135
+[UPDATE], 99.7PercentileLatency(us), 20655
+[UPDATE], 99.8PercentileLatency(us), 22623
+[UPDATE], 99.85PercentileLatency(us), 23983
+[UPDATE], 99.89PercentileLatency(us), 26719
+[UPDATE], 99.9PercentileLatency(us), 28479
+[UPDATE], Return=OK, 50386
