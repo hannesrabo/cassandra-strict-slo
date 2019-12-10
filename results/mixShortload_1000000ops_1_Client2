@@ -1,0 +1,575 @@
+[WARN]  The 'cassandra2-cql' client has been deprecated. It has been renamed to simply 'cassandra-cql'. This alias will be removed in the next YCSB release.
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl com.yahoo.ycsb:cassandra-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+java -cp /home/csd/YCSB/cassandra/conf:/home/csd/YCSB/cassandra/target/cassandra-binding-0.17.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar:/root/.m2/repository/org/apache/httpcomponents/fluent-hc/4.3.3/fluent-hc-4.3.3.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient-osgi/4.3.3/httpclient-osgi-4.3.3.jar:/root/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar:/root/.m2/repository/com/datastax/cassandra/cassandra-driver-core/3.0.0/cassandra-driver-core-3.0.0.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar:/root/.m2/repository/io/netty/netty-handler/4.0.33.Final/netty-handler-4.0.33.Final.jar:/home/csd/YCSB/core/target/core-0.17.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient-cache/4.3.3/httpclient-cache-4.3.3.jar:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/root/.m2/repository/org/jolokia/jolokia-client-java/1.2.2/jolokia-client-java-1.2.2.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/root/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/root/.m2/repository/io/netty/netty-transport/4.0.33.Final/netty-transport-4.0.33.Final.jar:/root/.m2/repository/io/netty/netty-codec/4.0.33.Final/netty-codec-4.0.33.Final.jar:/root/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/root/.m2/repository/org/apache/httpcomponents/httpmime/4.3.3/httpmime-4.3.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.2/commons-codec-1.2.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/root/.m2/repository/io/netty/netty-buffer/4.0.33.Final/netty-buffer-4.0.33.Final.jar:/root/.m2/repository/io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final.jar:/root/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar com.yahoo.ycsb.Client -db com.yahoo.ycsb.db.CassandraCQLClient -p hosts=100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14 -P workloads/workloadb_short -threads 12 -s -load
+Command line: -db com.yahoo.ycsb.db.CassandraCQLClient -p hosts=100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14 -P workloads/workloadb_short -threads 12 -s -load
+YCSB Client 0.17.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Speculative execution policy: 1
+Target operations: 0
+2019-12-06 16:28:28:600 0 sec: 0 operations; est completion in 0 second 
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.PlatformDependent0 (file:/root/.m2/repository/io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.PlatformDependent0
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Dec 06, 2019 4:28:29 PM io.netty.util.internal.PlatformDependent <clinit>
+INFO: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Performance thread started: 2019-12-06 16:28:33.069
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/perf_1_0_100.0.0.11
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/perf_1_0_100.0.0.12
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/perf_1_0_100.0.0.13
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/perf_1_0_100.0.0.14
+Performance collection stopped: 2019-12-06 16:28:38.374
+2019-12-06 16:28:38:374 10 sec: 1000 operations; 99.99 current ops/sec; [CLEANUP: Count=11, Max=18, Min=3, Avg=5, 90=10, 99=18, 99.9=18, 99.99=18] [INSERT: Count=1000, Max=386815, Min=1886, Avg=36482.28, 90=60383, 99=277247, 99.9=386815, 99.99=386815] 
+2019-12-06 16:28:38:488 10 sec: 1000 operations; 0 current ops/sec; [CLEANUP: Count=1, Max=2379775, Min=2377728, Avg=2378752, 90=2379775, 99=2379775, 99.9=2379775, 99.99=2379775] [INSERT: Count=0, Max=0, Min=9223372036854775807, Avg=NaN, 90=0, 99=0, 99.9=0, 99.99=0] 
+[OVERALL], RunTime(ms), 10112
+[OVERALL], Throughput(ops/sec), 98.89240506329114
+[TOTAL_GCS_Copy], Count, 1
+[TOTAL_GC_TIME_Copy], Time(ms), 58
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.5735759493670887
+[TOTAL_GCS_MarkSweepCompact], Count, 0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 58
+[TOTAL_GC_TIME_%], Time(%), 0.5735759493670887
+[CLEANUP], Operations, 12
+[CLEANUP], AverageLatency(us), 198233.91666666666
+[CLEANUP], MinLatency(us), 3
+[CLEANUP], MaxLatency(us), 2379775
+[CLEANUP], 10thPercentileLatency(us), 3
+[CLEANUP], 20thPercentileLatency(us), 3
+[CLEANUP], 30thPercentileLatency(us), 3
+[CLEANUP], 40thPercentileLatency(us), 3
+[CLEANUP], 50thPercentileLatency(us), 3
+[CLEANUP], 60thPercentileLatency(us), 3
+[CLEANUP], 70thPercentileLatency(us), 3
+[CLEANUP], 80thPercentileLatency(us), 10
+[CLEANUP], 90thPercentileLatency(us), 18
+[CLEANUP], 95thPercentileLatency(us), 18
+[CLEANUP], 96thPercentileLatency(us), 2379775
+[CLEANUP], 97thPercentileLatency(us), 2379775
+[CLEANUP], 98thPercentileLatency(us), 2379775
+[CLEANUP], 99thPercentileLatency(us), 2379775
+[CLEANUP], 99.1PercentileLatency(us), 2379775
+[CLEANUP], 99.2PercentileLatency(us), 2379775
+[CLEANUP], 99.3PercentileLatency(us), 2379775
+[CLEANUP], 99.4PercentileLatency(us), 2379775
+[CLEANUP], 99.5PercentileLatency(us), 2379775
+[CLEANUP], 99.6PercentileLatency(us), 2379775
+[CLEANUP], 99.7PercentileLatency(us), 2379775
+[CLEANUP], 99.8PercentileLatency(us), 2379775
+[CLEANUP], 99.85PercentileLatency(us), 2379775
+[CLEANUP], 99.89PercentileLatency(us), 2379775
+[CLEANUP], 99.9PercentileLatency(us), 2379775
+[INSERT], Operations, 1000
+[INSERT], AverageLatency(us), 36482.282
+[INSERT], MinLatency(us), 1886
+[INSERT], MaxLatency(us), 386815
+[INSERT], 10thPercentileLatency(us), 12263
+[INSERT], 20thPercentileLatency(us), 18367
+[INSERT], 30thPercentileLatency(us), 22383
+[INSERT], 40thPercentileLatency(us), 26271
+[INSERT], 50thPercentileLatency(us), 29247
+[INSERT], 60thPercentileLatency(us), 33535
+[INSERT], 70thPercentileLatency(us), 39839
+[INSERT], 80thPercentileLatency(us), 47871
+[INSERT], 90thPercentileLatency(us), 60383
+[INSERT], 95thPercentileLatency(us), 70591
+[INSERT], 96thPercentileLatency(us), 73791
+[INSERT], 97thPercentileLatency(us), 76031
+[INSERT], 98thPercentileLatency(us), 83519
+[INSERT], 99thPercentileLatency(us), 277247
+[INSERT], 99.1PercentileLatency(us), 277247
+[INSERT], 99.2PercentileLatency(us), 331007
+[INSERT], 99.3PercentileLatency(us), 333567
+[INSERT], 99.4PercentileLatency(us), 336127
+[INSERT], 99.5PercentileLatency(us), 340735
+[INSERT], 99.6PercentileLatency(us), 346111
+[INSERT], 99.7PercentileLatency(us), 382207
+[INSERT], 99.8PercentileLatency(us), 383743
+[INSERT], 99.85PercentileLatency(us), 386815
+[INSERT], 99.89PercentileLatency(us), 386815
+[INSERT], 99.9PercentileLatency(us), 386815
+[INSERT], Return=OK, 1000
+[WARN]  The 'cassandra2-cql' client has been deprecated. It has been renamed to simply 'cassandra-cql'. This alias will be removed in the next YCSB release.
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl com.yahoo.ycsb:cassandra-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[ERROR]  Attempting to generate a classpath from Maven failed with return code '1'. The output from Maven follows, try running 'mvn -DskipTests package dependency:build=classpath' on your own and correct errors.
+
+mvn output:
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for com.yahoo.ycsb:cassandra-binding:jar:0.17.0-SNAPSHOT
+[[1;33mWARNING[m] 'repositories.repository.id' must not be 'local', this identifier is reserved for the local repository, using it for other repositories will corrupt your repository metadata. @ com.yahoo.ycsb:cassandra-binding:[unknown-version], /home/csd/YCSB/cassandra/pom.xml, line 114, column 29
+[[1;33mWARNING[m] 'pluginRepositories.pluginRepository.id' must not be 'local', this identifier is reserved for the local repository, using it for other repositories will corrupt your repository metadata. @ com.yahoo.ycsb:cassandra-binding:[unknown-version], /home/csd/YCSB/cassandra/pom.xml, line 120, column 29
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Build Order:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] YCSB Root                                                          [pom]
+[[1;34mINFO[m] Core YCSB                                                          [jar]
+[[1;34mINFO[m] Per Datastore Binding descriptor                                   [jar]
+[[1;34mINFO[m] YCSB Datastore Binding Parent                                      [pom]
+[[1;34mINFO[m] Cassandra 2.1+ DB Binding                                          [jar]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------< [0;36mcom.yahoo.ycsb:root[0;1m >-------------------------[m
+[[1;34mINFO[m] [1mBuilding YCSB Root 0.17.0-SNAPSHOT                                 [1/5][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M1:enforce[m [1m(enforce-maven)[m @ [36mroot[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:2.16:check[m [1m(validate)[m @ [36mroot[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:2.8:build-classpath[m [1m(default-cli)[m @ [36mroot[0;1m ---[m
+[[1;34mINFO[m] No dependencies found.
+[[1;34mINFO[m] Dependencies classpath:
+classpath=
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------< [0;36mcom.yahoo.ycsb:core[0;1m >-------------------------[m
+[[1;34mINFO[m] [1mBuilding Core YCSB 0.17.0-SNAPSHOT                                 [2/5][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M1:enforce[m [1m(enforce-maven)[m @ [36mcore[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:2.16:check[m [1m(validate)[m @ [36mcore[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mcore[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.7.0:compile[m [1m(default-compile)[m @ [36mcore[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 63 source files to /home/csd/YCSB/core/target/classes
+[[1;34mINFO[m] /home/csd/YCSB/core/src/main/java/com/yahoo/ycsb/DBFactory.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /home/csd/YCSB/core/src/main/java/com/yahoo/ycsb/DBFactory.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mcore[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/csd/YCSB/core/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.7.0:testCompile[m [1m(default-testCompile)[m @ [36mcore[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mcore[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mcore[0;1m ---[m
+[[1;34mINFO[m] Building jar: /home/csd/YCSB/core/target/core-0.17.0-SNAPSHOT.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:2.8:build-classpath[m [1m(default-cli)[m @ [36mcore[0;1m ---[m
+[[1;34mINFO[m] Dependencies classpath:
+classpath=/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------< [0;36mcom.yahoo.ycsb:datastore-specific-descriptor[0;1m >------------[m
+[[1;34mINFO[m] [1mBuilding Per Datastore Binding descriptor 0.17.0-SNAPSHOT          [3/5][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M1:enforce[m [1m(enforce-maven)[m @ [36mdatastore-specific-descriptor[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:2.16:check[m [1m(validate)[m @ [36mdatastore-specific-descriptor[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mdatastore-specific-descriptor[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.7.0:compile[m [1m(default-compile)[m @ [36mdatastore-specific-descriptor[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mdatastore-specific-descriptor[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/csd/YCSB/binding-parent/datastore-specific-descriptor/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.7.0:testCompile[m [1m(default-testCompile)[m @ [36mdatastore-specific-descriptor[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mdatastore-specific-descriptor[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mdatastore-specific-descriptor[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:2.8:build-classpath[m [1m(default-cli)[m @ [36mdatastore-specific-descriptor[0;1m ---[m
+[[1;34mINFO[m] Dependencies classpath:
+classpath=/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/home/csd/YCSB/core/target/core-0.17.0-SNAPSHOT.jar:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36mcom.yahoo.ycsb:binding-parent[0;1m >--------------------[m
+[[1;34mINFO[m] [1mBuilding YCSB Datastore Binding Parent 0.17.0-SNAPSHOT             [4/5][m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M1:enforce[m [1m(enforce-maven)[m @ [36mbinding-parent[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:2.16:check[m [1m(validate)[m @ [36mbinding-parent[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:2.10:copy-dependencies[m [1m(stage-dependencies)[m @ [36mbinding-parent[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:2.10:build-classpath[m [1m(default-cli)[m @ [36mbinding-parent[0;1m ---[m
+[[1;34mINFO[m] No dependencies found.
+[[1;34mINFO[m] Dependencies classpath:
+classpath=
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------< [0;36mcom.yahoo.ycsb:cassandra-binding[0;1m >------------------[m
+[[1;34mINFO[m] [1mBuilding Cassandra 2.1+ DB Binding 0.17.0-SNAPSHOT                 [5/5][m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M1:enforce[m [1m(enforce-maven)[m @ [36mcassandra-binding[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-checkstyle-plugin:2.16:check[m [1m(validate)[m @ [36mcassandra-binding[0;1m ---[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Summary for YCSB Root 0.17.0-SNAPSHOT:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] YCSB Root .......................................... [1;32mSUCCESS[m [  9.116 s]
+[[1;34mINFO[m] Core YCSB .......................................... [1;32mSUCCESS[m [ 12.780 s]
+[[1;34mINFO[m] Per Datastore Binding descriptor ................... [1;32mSUCCESS[m [  1.165 s]
+[[1;34mINFO[m] YCSB Datastore Binding Parent ...................... [1;32mSUCCESS[m [  2.232 s]
+[[1;34mINFO[m] Cassandra 2.1+ DB Binding .......................... [1;31mFAILURE[m [  2.227 s]
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  30.581 s
+[[1;34mINFO[m] Finished at: 2019-12-06T16:29:25Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-checkstyle-plugin:2.16:check[m [1m(validate)[m on project [36mcassandra-binding[m: [1;31mFailed during checkstyle execution[m: Failed during checkstyle configuration: unable to read /home/csd/YCSB/cassandra/target/checkstyle-checker.xml - unable to parse configuration stream - Premature end of file.:-1:-1 -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[[1;31mERROR[m] 
+[[1;31mERROR[m] After correcting the problems, you can resume the build with the command
+[[1;31mERROR[m]   [1mmvn <goals> -rf :cassandra-binding[m
+
+[WARN]  The 'cassandra2-cql' client has been deprecated. It has been renamed to simply 'cassandra-cql'. This alias will be removed in the next YCSB release.
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl com.yahoo.ycsb:cassandra-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+java -cp /home/csd/YCSB/cassandra/conf:/home/csd/YCSB/cassandra/target/cassandra-binding-0.17.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar:/root/.m2/repository/org/apache/httpcomponents/fluent-hc/4.3.3/fluent-hc-4.3.3.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient-osgi/4.3.3/httpclient-osgi-4.3.3.jar:/root/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar:/root/.m2/repository/com/datastax/cassandra/cassandra-driver-core/3.0.0/cassandra-driver-core-3.0.0.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar:/root/.m2/repository/io/netty/netty-handler/4.0.33.Final/netty-handler-4.0.33.Final.jar:/home/csd/YCSB/core/target/core-0.17.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient-cache/4.3.3/httpclient-cache-4.3.3.jar:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/root/.m2/repository/org/jolokia/jolokia-client-java/1.2.2/jolokia-client-java-1.2.2.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/root/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/root/.m2/repository/io/netty/netty-transport/4.0.33.Final/netty-transport-4.0.33.Final.jar:/root/.m2/repository/io/netty/netty-codec/4.0.33.Final/netty-codec-4.0.33.Final.jar:/root/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/root/.m2/repository/org/apache/httpcomponents/httpmime/4.3.3/httpmime-4.3.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.2/commons-codec-1.2.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/root/.m2/repository/io/netty/netty-buffer/4.0.33.Final/netty-buffer-4.0.33.Final.jar:/root/.m2/repository/io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final.jar:/root/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar com.yahoo.ycsb.Client -db com.yahoo.ycsb.db.CassandraCQLClient -p hosts=100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14 -P workloads/workloadb_short -threads 12 -target 2000 -s -p cassandra.speculative=1 -p performance.prefix=Client1 -t
+Command line: -db com.yahoo.ycsb.db.CassandraCQLClient -p hosts=100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14 -P workloads/workloadb_short -threads 12 -target 2000 -s -p cassandra.speculative=1 -p performance.prefix=Client1 -t
+YCSB Client 0.17.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Speculative execution policy: 1
+Target operations: 2000
+2019-12-06 16:31:29:684 0 sec: 0 operations; est completion in 0 second 
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.PlatformDependent0 (file:/root/.m2/repository/io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.PlatformDependent0
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Dec 06, 2019 4:31:30 PM io.netty.util.internal.PlatformDependent <clinit>
+INFO: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Performance thread started: 2019-12-06 16:31:36.109
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/Client1_1_2000_100.0.0.11
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/Client1_1_2000_100.0.0.12
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/Client1_1_2000_100.0.0.13
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/Client1_1_2000_100.0.0.14
+2019-12-06 16:31:39:349 10 sec: 1701 operations; 170.1 current ops/sec; est completion in 9 minutes [READ: Count=1621, Max=224511, Min=1641, Avg=22712.58, 90=37951, 99=59615, 99.9=219775, 99.99=224511] [UPDATE: Count=86, Max=201343, Min=3020, Avg=31907.57, 90=54271, 99=150143, 99.9=201343, 99.99=201343] 
+2019-12-06 16:31:49:349 20 sec: 17227 operations; 1552.6 current ops/sec; est completion in 1 minute [READ: Count=14775, Max=260479, Min=977, Avg=7691.55, 90=13127, 99=23647, 99.9=56991, 99.99=256255] [UPDATE: Count=746, Max=39711, Min=1559, Avg=7901.14, 90=13207, 99=23999, 99.9=39327, 99.99=39711] 
+2019-12-06 16:31:59:349 30 sec: 36216 operations; 1898.9 current ops/sec; est completion in 53 seconds [READ: Count=18031, Max=83327, Min=968, Avg=6292.01, 90=11127, 99=19791, 99.9=46623, 99.99=81535] [UPDATE: Count=957, Max=31807, Min=1195, Avg=6324.5, 90=11199, 99=18511, 99.9=27279, 99.99=31807] 
+2019-12-06 16:32:09:349 40 sec: 59689 operations; 2347.3 current ops/sec; est completion in 28 seconds [READ: Count=22276, Max=47199, Min=901, Avg=5079.97, 90=9375, 99=16943, 99.9=32767, 99.99=43071] [UPDATE: Count=1197, Max=38047, Min=1044, Avg=5440.25, 90=9959, 99=21487, 99.9=36511, 99.99=38047] 
+2019-12-06 16:32:19:349 50 sec: 86588 operations; 2689.9 current ops/sec; est completion in 8 second [READ: Count=25503, Max=61119, Min=853, Avg=4335.77, 90=8163, 99=15967, 99.9=29775, 99.99=60063] [UPDATE: Count=1396, Max=30319, Min=946, Avg=4669.73, 90=8999, 99=18639, 99.9=30255, 99.99=30319] 
+Performance collection stopped: 2019-12-06 16:32:28.382
+2019-12-06 16:32:28:823 59 sec: 100000 operations; 1415.66 current ops/sec; [READ: Count=12731, Max=74047, Min=863, Avg=3414.1, 90=6323, 99=15239, 99.9=32991, 99.99=73215] [CLEANUP: Count=12, Max=2717695, Min=2, Avg=226393, 90=16, 99=2717695, 99.9=2717695, 99.99=2717695] [UPDATE: Count=681, Max=27391, Min=1019, Avg=3720.56, 90=6619, 99=15215, 99.9=23455, 99.99=27391] 
+[OVERALL], RunTime(ms), 59483
+[OVERALL], Throughput(ops/sec), 1681.1525982213404
+[TOTAL_GCS_Copy], Count, 14
+[TOTAL_GC_TIME_Copy], Time(ms), 396
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.6657364288956509
+[TOTAL_GCS_MarkSweepCompact], Count, 0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCs], Count, 14
+[TOTAL_GC_TIME], Time(ms), 396
+[TOTAL_GC_TIME_%], Time(%), 0.6657364288956509
+[READ], Operations, 94937
+[READ], AverageLatency(us), 5594.367559539484
+[READ], MinLatency(us), 853
+[READ], MaxLatency(us), 260479
+[READ], 10thPercentileLatency(us), 1960
+[READ], 20thPercentileLatency(us), 2559
+[READ], 30thPercentileLatency(us), 3063
+[READ], 40thPercentileLatency(us), 3579
+[READ], 50thPercentileLatency(us), 4187
+[READ], 60thPercentileLatency(us), 4931
+[READ], 70thPercentileLatency(us), 5987
+[READ], 80thPercentileLatency(us), 7647
+[READ], 90thPercentileLatency(us), 10527
+[READ], 95thPercentileLatency(us), 13399
+[READ], 96thPercentileLatency(us), 14455
+[READ], 97thPercentileLatency(us), 15927
+[READ], 98thPercentileLatency(us), 18655
+[READ], 99thPercentileLatency(us), 24655
+[READ], 99.1PercentileLatency(us), 25567
+[READ], 99.2PercentileLatency(us), 26719
+[READ], 99.3PercentileLatency(us), 27887
+[READ], 99.4PercentileLatency(us), 29247
+[READ], 99.5PercentileLatency(us), 31103
+[READ], 99.6PercentileLatency(us), 33119
+[READ], 99.7PercentileLatency(us), 36191
+[READ], 99.8PercentileLatency(us), 41375
+[READ], 99.85PercentileLatency(us), 45151
+[READ], 99.89PercentileLatency(us), 49599
+[READ], 99.9PercentileLatency(us), 51487
+[READ], Return=OK, 94937
+[CLEANUP], Operations, 12
+[CLEANUP], AverageLatency(us), 226393.0
+[CLEANUP], MinLatency(us), 2
+[CLEANUP], MaxLatency(us), 2717695
+[CLEANUP], 10thPercentileLatency(us), 2
+[CLEANUP], 20thPercentileLatency(us), 2
+[CLEANUP], 30thPercentileLatency(us), 3
+[CLEANUP], 40thPercentileLatency(us), 3
+[CLEANUP], 50thPercentileLatency(us), 3
+[CLEANUP], 60thPercentileLatency(us), 3
+[CLEANUP], 70thPercentileLatency(us), 3
+[CLEANUP], 80thPercentileLatency(us), 3
+[CLEANUP], 90thPercentileLatency(us), 16
+[CLEANUP], 95thPercentileLatency(us), 16
+[CLEANUP], 96thPercentileLatency(us), 2717695
+[CLEANUP], 97thPercentileLatency(us), 2717695
+[CLEANUP], 98thPercentileLatency(us), 2717695
+[CLEANUP], 99thPercentileLatency(us), 2717695
+[CLEANUP], 99.1PercentileLatency(us), 2717695
+[CLEANUP], 99.2PercentileLatency(us), 2717695
+[CLEANUP], 99.3PercentileLatency(us), 2717695
+[CLEANUP], 99.4PercentileLatency(us), 2717695
+[CLEANUP], 99.5PercentileLatency(us), 2717695
+[CLEANUP], 99.6PercentileLatency(us), 2717695
+[CLEANUP], 99.7PercentileLatency(us), 2717695
+[CLEANUP], 99.8PercentileLatency(us), 2717695
+[CLEANUP], 99.85PercentileLatency(us), 2717695
+[CLEANUP], 99.89PercentileLatency(us), 2717695
+[CLEANUP], 99.9PercentileLatency(us), 2717695
+[UPDATE], Operations, 5063
+[UPDATE], AverageLatency(us), 5975.7997234841005
+[UPDATE], MinLatency(us), 946
+[UPDATE], MaxLatency(us), 201343
+[UPDATE], 10thPercentileLatency(us), 2081
+[UPDATE], 20thPercentileLatency(us), 2687
+[UPDATE], 30thPercentileLatency(us), 3205
+[UPDATE], 40thPercentileLatency(us), 3773
+[UPDATE], 50thPercentileLatency(us), 4407
+[UPDATE], 60thPercentileLatency(us), 5143
+[UPDATE], 70thPercentileLatency(us), 6319
+[UPDATE], 80thPercentileLatency(us), 8095
+[UPDATE], 90thPercentileLatency(us), 11079
+[UPDATE], 95thPercentileLatency(us), 14191
+[UPDATE], 96thPercentileLatency(us), 15223
+[UPDATE], 97thPercentileLatency(us), 17231
+[UPDATE], 98thPercentileLatency(us), 20047
+[UPDATE], 99thPercentileLatency(us), 27231
+[UPDATE], 99.1PercentileLatency(us), 27391
+[UPDATE], 99.2PercentileLatency(us), 28783
+[UPDATE], 99.3PercentileLatency(us), 30319
+[UPDATE], 99.4PercentileLatency(us), 31807
+[UPDATE], 99.5PercentileLatency(us), 33535
+[UPDATE], 99.6PercentileLatency(us), 36511
+[UPDATE], 99.7PercentileLatency(us), 39711
+[UPDATE], 99.8PercentileLatency(us), 53375
+[UPDATE], 99.85PercentileLatency(us), 66367
+[UPDATE], 99.89PercentileLatency(us), 79615
+[UPDATE], 99.9PercentileLatency(us), 94591
+[UPDATE], Return=OK, 5063
+[WARN]  The 'cassandra2-cql' client has been deprecated. It has been renamed to simply 'cassandra-cql'. This alias will be removed in the next YCSB release.
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl com.yahoo.ycsb:cassandra-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+java -cp /home/csd/YCSB/cassandra/conf:/home/csd/YCSB/cassandra/target/cassandra-binding-0.17.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar:/root/.m2/repository/org/apache/httpcomponents/fluent-hc/4.3.3/fluent-hc-4.3.3.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient-osgi/4.3.3/httpclient-osgi-4.3.3.jar:/root/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar:/root/.m2/repository/com/datastax/cassandra/cassandra-driver-core/3.0.0/cassandra-driver-core-3.0.0.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar:/root/.m2/repository/io/netty/netty-handler/4.0.33.Final/netty-handler-4.0.33.Final.jar:/home/csd/YCSB/core/target/core-0.17.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient-cache/4.3.3/httpclient-cache-4.3.3.jar:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/root/.m2/repository/org/jolokia/jolokia-client-java/1.2.2/jolokia-client-java-1.2.2.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/root/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/root/.m2/repository/io/netty/netty-transport/4.0.33.Final/netty-transport-4.0.33.Final.jar:/root/.m2/repository/io/netty/netty-codec/4.0.33.Final/netty-codec-4.0.33.Final.jar:/root/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/root/.m2/repository/org/apache/httpcomponents/httpmime/4.3.3/httpmime-4.3.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.2/commons-codec-1.2.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/root/.m2/repository/io/netty/netty-buffer/4.0.33.Final/netty-buffer-4.0.33.Final.jar:/root/.m2/repository/io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final.jar:/root/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar com.yahoo.ycsb.Client -db com.yahoo.ycsb.db.CassandraCQLClient -p hosts=100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14 -P workloads/workloadb_short -threads 12 -target 2000 -s -p cassandra.speculative=1 -p performance.prefix=Client1 -t
+Command line: -db com.yahoo.ycsb.db.CassandraCQLClient -p hosts=100.0.0.11,100.0.0.12,100.0.0.13,100.0.0.14 -P workloads/workloadb_short -threads 12 -target 2000 -s -p cassandra.speculative=1 -p performance.prefix=Client1 -t
+YCSB Client 0.17.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Speculative execution policy: 1
+Target operations: 2000
+2019-12-06 16:33:53:598 0 sec: 0 operations; est completion in 0 second 
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.PlatformDependent0 (file:/root/.m2/repository/io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final.jar) to field java.nio.Buffer.address
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.PlatformDependent0
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Dec 06, 2019 4:33:53 PM io.netty.util.internal.PlatformDependent <clinit>
+INFO: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+Performance thread started: 2019-12-06 16:33:55.802
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/Client1_1_2000_100.0.0.11
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/Client1_1_2000_100.0.0.12
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/Client1_1_2000_100.0.0.13
+Creating peformance file: /home/csd/cassandra-strict-slo/performance/Client1_1_2000_100.0.0.14
+2019-12-06 16:34:03:485 10 sec: 15481 operations; 1547.95 current ops/sec; est completion in 55 seconds [READ: Count=14753, Max=189311, Min=953, Avg=5237.95, 90=11671, 99=24719, 99.9=75839, 99.99=185727] [UPDATE: Count=734, Max=76031, Min=1137, Avg=5751.22, 90=12455, 99=39999, 99.9=61823, 99.99=76031] 
+2019-12-06 16:34:13:485 20 sec: 35482 operations; 2000.1 current ops/sec; est completion in 37 seconds [READ: Count=19013, Max=84799, Min=903, Avg=2364.95, 90=3443, 99=10783, 99.9=24367, 99.99=83263] [UPDATE: Count=983, Max=28207, Min=1058, Avg=2434.46, 90=3681, 99=8239, 99.9=14143, 99.99=28207] 
+2019-12-06 16:34:23:486 30 sec: 55479 operations; 1999.7 current ops/sec; est completion in 25 seconds [READ: Count=19009, Max=40351, Min=866, Avg=2461.02, 90=3647, 99=12335, 99.9=25679, 99.99=32671] [UPDATE: Count=997, Max=25407, Min=992, Avg=2743.49, 90=3959, 99=12895, 99.9=20319, 99.99=25407] 
+2019-12-06 16:34:33:485 40 sec: 75479 operations; 2000 current ops/sec; est completion in 13 seconds [READ: Count=18937, Max=52639, Min=890, Avg=2451.42, 90=3633, 99=10919, 99.9=23087, 99.99=39903] [UPDATE: Count=1055, Max=28751, Min=979, Avg=2719.64, 90=3883, 99=16639, 99.9=25135, 99.99=28751] 
+2019-12-06 16:34:43:486 50 sec: 95482 operations; 2000.3 current ops/sec; est completion in 3 second [READ: Count=19005, Max=38783, Min=917, Avg=2419.6, 90=3553, 99=9055, 99.9=21375, 99.99=30015] [UPDATE: Count=996, Max=30319, Min=1043, Avg=2579.45, 90=3789, 99=7547, 99.9=21567, 99.99=30319] 
+Performance collection stopped: 2019-12-06 16:34:48.035
+2019-12-06 16:34:48:401 54 sec: 100000 operations; 919.23 current ops/sec; [READ: Count=4265, Max=33535, Min=938, Avg=2643.22, 90=3925, 99=14183, 99.9=27615, 99.99=33535] [CLEANUP: Count=12, Max=2646015, Min=4, Avg=220422.92, 90=38, 99=2646015, 99.9=2646015, 99.99=2646015] [UPDATE: Count=253, Max=30879, Min=1030, Avg=2689.45, 90=3881, 99=7843, 99.9=30879, 99.99=30879] 
+[OVERALL], RunTime(ms), 54916
+[OVERALL], Throughput(ops/sec), 1820.9629251948431
+[TOTAL_GCS_Copy], Count, 14
+[TOTAL_GC_TIME_Copy], Time(ms), 174
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.3168475489839027
+[TOTAL_GCS_MarkSweepCompact], Count, 0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCs], Count, 14
+[TOTAL_GC_TIME], Time(ms), 174
+[TOTAL_GC_TIME_%], Time(%), 0.3168475489839027
+[READ], Operations, 94982
+[READ], AverageLatency(us), 2871.0918068686697
+[READ], MinLatency(us), 866
+[READ], MaxLatency(us), 189311
+[READ], 10thPercentileLatency(us), 1297
+[READ], 20thPercentileLatency(us), 1491
+[READ], 30thPercentileLatency(us), 1678
+[READ], 40thPercentileLatency(us), 1881
+[READ], 50thPercentileLatency(us), 2107
+[READ], 60thPercentileLatency(us), 2377
+[READ], 70thPercentileLatency(us), 2773
+[READ], 80thPercentileLatency(us), 3227
+[READ], 90thPercentileLatency(us), 4327
+[READ], 95thPercentileLatency(us), 7167
+[READ], 96thPercentileLatency(us), 8631
+[READ], 97thPercentileLatency(us), 10463
+[READ], 98thPercentileLatency(us), 12287
+[READ], 99thPercentileLatency(us), 16071
+[READ], 99.1PercentileLatency(us), 16783
+[READ], 99.2PercentileLatency(us), 17391
+[READ], 99.3PercentileLatency(us), 18287
+[READ], 99.4PercentileLatency(us), 19007
+[READ], 99.5PercentileLatency(us), 20095
+[READ], 99.6PercentileLatency(us), 21103
+[READ], 99.7PercentileLatency(us), 23087
+[READ], 99.8PercentileLatency(us), 25615
+[READ], 99.85PercentileLatency(us), 27391
+[READ], 99.89PercentileLatency(us), 29759
+[READ], 99.9PercentileLatency(us), 30575
+[READ], Return=OK, 94982
+[CLEANUP], Operations, 12
+[CLEANUP], AverageLatency(us), 220422.91666666666
+[CLEANUP], MinLatency(us), 4
+[CLEANUP], MaxLatency(us), 2646015
+[CLEANUP], 10thPercentileLatency(us), 4
+[CLEANUP], 20thPercentileLatency(us), 4
+[CLEANUP], 30thPercentileLatency(us), 4
+[CLEANUP], 40thPercentileLatency(us), 4
+[CLEANUP], 50thPercentileLatency(us), 5
+[CLEANUP], 60thPercentileLatency(us), 5
+[CLEANUP], 70thPercentileLatency(us), 5
+[CLEANUP], 80thPercentileLatency(us), 5
+[CLEANUP], 90thPercentileLatency(us), 38
+[CLEANUP], 95thPercentileLatency(us), 38
+[CLEANUP], 96thPercentileLatency(us), 2646015
+[CLEANUP], 97thPercentileLatency(us), 2646015
+[CLEANUP], 98thPercentileLatency(us), 2646015
+[CLEANUP], 99thPercentileLatency(us), 2646015
+[CLEANUP], 99.1PercentileLatency(us), 2646015
+[CLEANUP], 99.2PercentileLatency(us), 2646015
+[CLEANUP], 99.3PercentileLatency(us), 2646015
+[CLEANUP], 99.4PercentileLatency(us), 2646015
+[CLEANUP], 99.5PercentileLatency(us), 2646015
+[CLEANUP], 99.6PercentileLatency(us), 2646015
+[CLEANUP], 99.7PercentileLatency(us), 2646015
+[CLEANUP], 99.8PercentileLatency(us), 2646015
+[CLEANUP], 99.85PercentileLatency(us), 2646015
+[CLEANUP], 99.89PercentileLatency(us), 2646015
+[CLEANUP], 99.9PercentileLatency(us), 2646015
+[UPDATE], Operations, 5018
+[UPDATE], AverageLatency(us), 3082.605619768832
+[UPDATE], MinLatency(us), 979
+[UPDATE], MaxLatency(us), 76031
+[UPDATE], 10thPercentileLatency(us), 1422
+[UPDATE], 20thPercentileLatency(us), 1625
+[UPDATE], 30thPercentileLatency(us), 1811
+[UPDATE], 40thPercentileLatency(us), 2035
+[UPDATE], 50thPercentileLatency(us), 2259
+[UPDATE], 60thPercentileLatency(us), 2575
+[UPDATE], 70thPercentileLatency(us), 2945
+[UPDATE], 80thPercentileLatency(us), 3373
+[UPDATE], 90thPercentileLatency(us), 4583
+[UPDATE], 95thPercentileLatency(us), 7631
+[UPDATE], 96thPercentileLatency(us), 9031
+[UPDATE], 97thPercentileLatency(us), 10695
+[UPDATE], 98thPercentileLatency(us), 12895
+[UPDATE], 99thPercentileLatency(us), 17519
+[UPDATE], 99.1PercentileLatency(us), 18271
+[UPDATE], 99.2PercentileLatency(us), 19439
+[UPDATE], 99.3PercentileLatency(us), 20239
+[UPDATE], 99.4PercentileLatency(us), 20799
+[UPDATE], 99.5PercentileLatency(us), 21727
+[UPDATE], 99.6PercentileLatency(us), 25135
+[UPDATE], 99.7PercentileLatency(us), 28751
+[UPDATE], 99.8PercentileLatency(us), 36063
+[UPDATE], 99.85PercentileLatency(us), 39039
+[UPDATE], 99.89PercentileLatency(us), 44191
+[UPDATE], 99.9PercentileLatency(us), 44351
+[UPDATE], Return=OK, 5018
