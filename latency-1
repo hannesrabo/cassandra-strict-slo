@@ -1,0 +1,30 @@
+getting the 99th percentile from the outputs, also get the actual throughput
+ls | grep -P 'phase2_final_400000ops_1_[0-9]+$' | cut -f5 -d_ | sort -n | xargs -I{} cat phase2_final_400000ops_1_{} | grep '99thPercentile' | grep 'READ' | cut -d' ' -f3
+cat phase2_final_400000ops_1_1000 | grep 'Throughput' | cut -d' ' -f 3
+
+move the benchmark files
+ls | grep -oP '^(.+_[0-9]+)(_[0-9]+)$' | cut -d'_' -f-4 | sort | uniq | xargs mkdir
+ls | grep -oP '^(.+_[0-9]+)(_[0-9]+)$' | cut -d'_' -f-4 | sort | uniq | xargs -I@ sh -c 'mv @_* @'
+
+move the preformance files
+ls | grep -oP '^(.+_[0-9]+)(_[0-9]+)$' | cut -d'_' -f3 | sort | uniq | xargs mkdir
+ls | grep -oP '^(.+_[0-9]+)(_[0-9]+)$' | cut -d'_' -f3 | sort | uniq | xargs -I@ sh -c 'mv *_@_* @'
+
+benchmark 1, 99th
+400, 5955
+600, 5391
+800, 5767
+1000, 5839
+1200, 6231
+1400, 6851
+1600, 7719
+1800, 7375
+2000, 8335
+2200, 7967
+2400, 8415
+2600, 8615
+2800, 8895
+3000, 9071
+3200, 9047
+3400, 9239
+3600, 9367
