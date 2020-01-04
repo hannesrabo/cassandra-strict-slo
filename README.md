@@ -2,6 +2,8 @@
 
 In this project we create a virtual network of cassandra instances to benchmark them. The goals is to perform smart request duplications to increase chanses of meeting strict latency guarantees.
 
+The modified version of the cassandra driver was implemented in the benchmark tool YCSB. This code is available here: [https://github.com/hannesrabo/YCSB](https://github.com/hannesrabo/YCSB)
+
 Starting the topology can be done by running the following command in the root folder of the repo:
 
 ```sh
