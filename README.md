@@ -1,6 +1,6 @@
 # Cassandra Strict SLO 
 
-In this project we create a virtual network of cassandra instances to benchmark them. The goal is to perform smart request duplications to increase chances of meeting strict latency guarantees.
+In this project we create a virtual network of cassandra instances to benchmark them. The goal is to perform smart request duplications to increase the chance of meeting strict latency guarantees.
 
 # Developing
 > This has only been tested in ubuntu
