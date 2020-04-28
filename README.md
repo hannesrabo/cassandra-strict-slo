@@ -9,7 +9,6 @@ Starting the topology can be done by running the following command in the root f
 ```sh
 > sudo ./pttopology
 ```
->>>>>>> master
 
 # Developing
 > This has only been tested in ubuntu
